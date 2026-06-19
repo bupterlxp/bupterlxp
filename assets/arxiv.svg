@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 150" width="1000" height="150" fill="none" font-family="'Courier New',monospace">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
+    <filter id="fs" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="agrid" width="30" height="30" patternUnits="userSpaceOnUse"><path class="grd" d="M30 0 L0 0 0 30" fill="none" stroke="#0f1d33" stroke-width="1"/></pattern>
+    <style>.bg{fill:#07070d}.grd{stroke:#0f1d33}.txt{fill:#cfe3ff}
+      @media (prefers-color-scheme: light){.bg{fill:#f4f8fe}.grd{stroke:#dbe6f5}.txt{fill:#1f2d44}}</style>
+  </defs>
+  <rect class="bg" x="3" y="3" width="994" height="144" rx="14" fill="#07070d" stroke="url(#g1)" stroke-width="2"/>
+  <rect x="3" y="3" width="994" height="144" rx="14" fill="url(#agrid)" opacity="0.5"/>
+  <circle cx="34" cy="38" r="6" fill="#ff4fd8" filter="url(#fs)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+  <text x="52" y="43" font-size="16" font-weight="bold" fill="#00f0ff" letter-spacing="2">// arXiv PICK OF THE DAY · cs.CL</text>
+  <text class="txt" x="34" y="80" font-size="17" font-weight="bold" fill="#cfe3ff">LedgerAgent: Structured State for Policy-Adherent Tool-Calling</text>
+  <text class="txt" x="34" y="104" font-size="17" font-weight="bold" fill="#cfe3ff"> Agents</text>
+  <text x="34" y="130" font-size="13" fill="#a855f7">Md Nayem Uddin et al.</text>
+  <text x="966" y="130" text-anchor="end" font-size="12" fill="#7fdfff">http://arxiv.org/abs/2606.20529v1</text>
+</svg>
