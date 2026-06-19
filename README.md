@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/avatar.svg" alt="Cyber avatar of Xinping Lei" width="270" />
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=2600&pause=800&color=00F0FF&center=true&vCenter=true&width=720&lines=%24+whoami+-%3E+Xinping+Lei+%40+BUPT;compiling+ideas...+spawning+agents...;while+not+done%3A+research()+%E2%9A%A1;git+commit+-m+'one+more+paper';Building+LLM+Agents+that+actually+work" alt="Typing SVG" />
 </p>
 
