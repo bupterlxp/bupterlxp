@@ -30,8 +30,10 @@ def bar(value, ref, cap=250):
 def season_skin():
     """按日期自动切换的节日皮肤；返回标题栏徽章文字（空串=无）。"""
     t = datetime.date.today()
-    if t.year == 2026 and ((t.month == 6 and t.day >= 11) or (t.month == 7 and t.day <= 19)):
-        return "⚽ FIFA WORLD CUP 2026"
+    if t.year == 2026 and ((t.month == 6 and t.day >= 11) or (t.month == 7 and t.day <= 20)):
+        d = (datetime.date(2026, 7, 20) - t).days
+        tail = f" · FINAL T-{d}d" if d > 0 else " · FINAL TODAY!"
+        return "⚽ WORLD CUP 2026" + tail
     if (t.month == 1 and t.day >= 20) or (t.month == 2 and t.day <= 20):
         return "🏮 新春快乐"
     if t.month == 10 and t.day <= 7:
@@ -39,6 +41,48 @@ def season_skin():
     if (t.month == 12 and t.day >= 20) or (t.month == 1 and t.day <= 2):
         return "🎄 Happy New Year"
     return ""
+
+def write_arxiv():
+    """从 arXiv API 抓一篇最新 cs.CL 论文，渲染「今日精选」卡。失败则保留旧图/占位。"""
+    import xml.etree.ElementTree as ET
+    title, author, link = None, "—", "https://arxiv.org/list/cs.CL/recent"
+    try:
+        url = ("http://export.arxiv.org/api/query?search_query=cat:cs.CL"
+               "&sortBy=submittedDate&sortOrder=descending&max_results=1")
+        req = urllib.request.Request(url, headers={"User-Agent": "profile-bot"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            data = r.read().decode("utf-8")
+        ns = {"a": "http://www.w3.org/2005/Atom"}
+        e = ET.fromstring(data).find("a:entry", ns)
+        title = " ".join(e.find("a:title", ns).text.split())
+        authors = [a.find("a:name", ns).text for a in e.findall("a:author", ns)]
+        author = authors[0] + (" et al." if len(authors) > 1 else "")
+        link = e.find("a:id", ns).text.strip()
+    except Exception as ex:
+        print("arxiv fetch failed:", ex)
+        if os.path.exists("assets/arxiv.svg"):
+            return
+        title = "arXiv cs.CL — see latest submissions"
+    t1, t2 = esc(title[:62]), esc(title[62:120])
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 150" width="1000" height="150" fill="none" font-family="'Courier New',monospace">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
+    <filter id="fs" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="agrid" width="30" height="30" patternUnits="userSpaceOnUse"><path class="grd" d="M30 0 L0 0 0 30" fill="none" stroke="#0f1d33" stroke-width="1"/></pattern>
+    <style>.bg{{fill:#07070d}}.grd{{stroke:#0f1d33}}.txt{{fill:#cfe3ff}}
+      @media (prefers-color-scheme: light){{.bg{{fill:#f4f8fe}}.grd{{stroke:#dbe6f5}}.txt{{fill:#1f2d44}}}}</style>
+  </defs>
+  <rect class="bg" x="3" y="3" width="994" height="144" rx="14" fill="#07070d" stroke="url(#g1)" stroke-width="2"/>
+  <rect x="3" y="3" width="994" height="144" rx="14" fill="url(#agrid)" opacity="0.5"/>
+  <circle cx="34" cy="38" r="6" fill="#ff4fd8" filter="url(#fs)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+  <text x="52" y="43" font-size="16" font-weight="bold" fill="#00f0ff" letter-spacing="2">// arXiv PICK OF THE DAY · cs.CL</text>
+  <text class="txt" x="34" y="80" font-size="17" font-weight="bold" fill="#cfe3ff">{t1}</text>
+  <text class="txt" x="34" y="104" font-size="17" font-weight="bold" fill="#cfe3ff">{t2}</text>
+  <text x="34" y="130" font-size="13" fill="#a855f7">{esc(author)}</text>
+  <text x="966" y="130" text-anchor="end" font-size="12" fill="#7fdfff">{esc(link)}</text>
+</svg>'''
+    open("assets/arxiv.svg", "w", encoding="utf-8").write(svg)
+    print("generated arxiv.svg")
 
 def main():
     user  = api(f"/users/{USER}")
@@ -184,6 +228,7 @@ def main():
 </svg>'''
     open("assets/dashboard.svg", "w", encoding="utf-8").write(svg)
     print("generated dashboard.svg")
+    write_arxiv()
 
 if __name__ == "__main__":
     main()
