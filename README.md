@@ -107,5 +107,5 @@
   <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://img.shields.io/badge/Google_Scholar-00F0FF?style=for-the-badge&logo=googlescholar&logoColor=black" /></a>
   <a href="https://github.com/bupterlxp"><img src="https://img.shields.io/badge/GitHub-A855F7?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="https://arxiv.org/a/lei_x_1"><img src="https://img.shields.io/badge/arXiv-FF00E5?style=for-the-badge&logo=arxiv&logoColor=white" /></a>
-  <a href="mailto:bupterlxp@bupt.edu.cn"><img src="https://img.shields.io/badge/Email-28C840?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="mailto:1874493887@qq.com"><img src="https://img.shields.io/badge/QQ_Mail-EB1923?style=for-the-badge&logo=tencentqq&logoColor=white" /></a>
 </p>
