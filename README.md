@@ -1,40 +1,57 @@
-<!-- ⚡ NEON HERO BANNER (自托管 SVG，国内不碎图) -->
+<!-- ============ ⚡ CYBER-NEON PROFILE · 全自托管 SVG · 国内零碎图 ============ -->
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/banner.svg" alt="Xinping Lei — LLM / Agent Researcher" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=00F0FF&center=true&vCenter=true&width=640&lines=Building+LLM+Agents+that+actually+work;Multi-Agent+Systems+%26+Agentic+Coding;Reasoning%2C+Alignment+%26+Idea+Generation;Turning+research+into+real+tools+%E2%9A%A1" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=00F0FF&center=true&vCenter=true&width=680&lines=Building+LLM+Agents+that+actually+work;Multi-Agent+Systems+%26+Agentic+Coding;Reasoning%2C+Alignment+%26+Idea+Generation;Turning+research+into+real+tools+%E2%9A%A1" alt="Typing SVG" />
 </p>
 
 <p align="center">
   <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://img.shields.io/badge/Google_Scholar-00F0FF?style=for-the-badge&logo=googlescholar&logoColor=black" /></a>
   <img src="https://img.shields.io/badge/BUPT-A855F7?style=for-the-badge&logo=academia&logoColor=white" />
   <img src="https://img.shields.io/badge/LLM_·_Agent-FF00E5?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://komarev.com/ghpvc/?username=bupterlxp&color=00f0ff&style=for-the-badge&label=VIEWS" />
 </p>
+
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+
+## 🖥️ whoami
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=bupterlxp&color=00f0ff&style=flat-square&label=PROFILE+VIEWS" />
-  <img src="https://img.shields.io/github/followers/bupterlxp?label=FOLLOWERS&style=flat-square&color=ff00e5&logo=github" />
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/terminal.svg" alt="terminal" width="78%" />
 </p>
 
----
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
-### <img src="https://img.shields.io/badge/-00F0FF?style=flat-square" height="14"/> 🧠 关于我
+## 🧠 关于我
 
 ```python
 class XinpingLei:
     def __init__(self):
         self.affiliation = "北京邮电大学 · BUPT"
+        self.role        = "LLM / Agent Researcher"
         self.focus       = ["LLM", "Agent", "Idea Generation"]
         self.keywords    = ["Multi-Agent", "Agentic Coding",
                             "Reasoning & Alignment", "AIGC Orchestration"]
         self.motto       = "让模型不只是会聊天，而是会干活 ⚡"
+
+    def now(self):
+        return "building agents that actually work"
 ```
 
----
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
-### 🔬 研究方向
+## 📊 战绩面板
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/stats.svg" alt="stats" width="88%" />
+</p>
+
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+
+## 🔬 研究方向
 
 | 方向 | 代表工作 |
 |------|----------|
@@ -43,9 +60,7 @@ class XinpingLei:
 | 🧠 **LLM 推理 / 指令遵循 / 对齐** | HiPO · Inverse IFEval · KAT-Coder |
 | 💡 **科研创意生成（Ideation）** | MotivGraph-SoIQ (EMNLP 2025 Findings) · MMG2Skill |
 
----
-
-### 📄 代表性论文（Selected）
+## 📄 代表性论文（Selected）
 
 - **MotivGraph-SoIQ: Integrating Motivational Knowledge Graphs and Socratic Dialogue for Enhanced LLM Ideation** — *Findings of EMNLP 2025*
 - **KAT-Coder Technical Report** — [arXiv:2510.18779](https://arxiv.org/abs/2510.18779)
@@ -56,9 +71,7 @@ class XinpingLei:
 
 > 📚 完整论文列表见 [Google Scholar](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN)
 
----
-
-### 🚀 开源项目
+## 🚀 开源项目
 
 - 🎬 **[AutoMV](https://github.com/bupterlxp/AutoMV.github.io)** — 自动化多智能体音乐视频生成系统
 - 🌐 **[webcompass_pipeline](https://github.com/bupterlxp/webcompass_pipeline)** — 多模态 Web 代码生成 / 评测 / 过滤流水线
@@ -66,9 +79,7 @@ class XinpingLei:
 - 🗂️ **[work-planner](https://github.com/bupterlxp/work-planner)** — 看板 / 本周 / AI 总结的纯静态 PWA 工作规划工具
 - ⚙️ **[codex-config-manager](https://github.com/bupterlxp/codex-config-manager)** — 本地切换 Codex 鉴权 / 配置档的 Web UI
 
----
-
-### 🛠️ 技术栈
+## 🛠️ 技术栈
 
 <p>
   <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -82,10 +93,16 @@ class XinpingLei:
   <img src="https://img.shields.io/badge/-LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" />
 </p>
 
----
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
-### 🐍 贡献动画
+## 🐍 贡献动画
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg" alt="Snake animation" />
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg" alt="snake" width="100%" />
+</p>
+
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+
+<p align="center">
+  <sub>⚡ 全站头图 / 终端 / 战绩卡 / 分割线均为手写自托管 SVG，国内访问不碎图 · Crafted with neon & care</sub>
 </p>
