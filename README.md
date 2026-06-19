@@ -22,6 +22,16 @@
 
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
+## 🌌 论文星图
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/constellation.svg" alt="paper constellation" width="92%" />
+</p>
+
+> 🌓 全站自托管图均支持**浅/深色自适应**；右上角节日皮肤随日期自动切换（当前：⚽ FIFA World Cup 2026）。
+
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+
 ## 🔬 研究方向
 
 | 方向 | 代表工作 |
