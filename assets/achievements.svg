@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" fill="none" font-family="'Courier New',monospace">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
+    <filter id="fs" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path class="grd" d="M34 0 L0 0 0 34" fill="none" stroke="#0f1d33" stroke-width="1"/></pattern>
+    <style>.bg{fill:#07070d}.grd{stroke:#0f1d33}.lbl{fill:#cfe3ff}
+      @media (prefers-color-scheme: light){.bg{fill:#f4f8fe}.grd{stroke:#dbe6f5}.lbl{fill:#2b4a73}}</style>
+  </defs>
+  <rect class="bg" x="3" y="3" width="994" height="294" rx="16" fill="#07070d" stroke="url(#g1)" stroke-width="2"/>
+  <rect x="3" y="3" width="994" height="294" rx="16" fill="url(#grid)" opacity="0.5"/>
+  <text x="30" y="46" font-size="18" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="2">// ACHIEVEMENTS UNLOCKED · 成就墙</text>
+
+  <!-- card template: x positions 40,360,680 ; y rows 78 / 188 -->
+  <g>
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.2s" fill="freeze"/>
+      <rect x="40" y="78" width="280" height="90" rx="12" fill="#0c1730" stroke="url(#g1)" stroke-width="1.6"/>
+      <text x="64" y="128" font-size="30">🥇</text><text class="lbl" x="108" y="118" font-size="15" font-weight="bold" fill="#cfe3ff">First Paper</text><text x="108" y="142" font-size="12" fill="#28c840">UNLOCKED</text></g>
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.4s" fill="freeze"/>
+      <rect x="360" y="78" width="280" height="90" rx="12" fill="#0c1730" stroke="url(#g1)" stroke-width="1.6"/>
+      <text x="384" y="128" font-size="30">🎯</text><text class="lbl" x="428" y="118" font-size="15" font-weight="bold" fill="#cfe3ff">EMNLP 2025</text><text x="428" y="142" font-size="12" fill="#28c840">UNLOCKED</text></g>
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.6s" fill="freeze"/>
+      <rect x="680" y="78" width="280" height="90" rx="12" fill="#0c1730" stroke="url(#g1)" stroke-width="1.6"/>
+      <text x="704" y="128" font-size="30">📈</text><text class="lbl" x="748" y="118" font-size="15" font-weight="bold" fill="#cfe3ff">h-index 4</text><text x="748" y="142" font-size="12" fill="#28c840">UNLOCKED</text></g>
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.8s" fill="freeze"/>
+      <rect x="40" y="188" width="280" height="90" rx="12" fill="#0c1730" stroke="url(#g1)" stroke-width="1.6"/>
+      <text x="64" y="238" font-size="30">🎓</text><text class="lbl" x="108" y="228" font-size="15" font-weight="bold" fill="#cfe3ff">PhD Admitted</text><text x="108" y="252" font-size="12" fill="#28c840">UNLOCKED · 2026</text></g>
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.0s" fill="freeze"/>
+      <rect x="360" y="188" width="280" height="90" rx="12" fill="#0c1730" stroke="url(#g1)" stroke-width="1.6"/>
+      <text x="384" y="238" font-size="30">⭐</text><text class="lbl" x="428" y="228" font-size="15" font-weight="bold" fill="#cfe3ff">11 Papers</text><text x="428" y="252" font-size="12" fill="#28c840">UNLOCKED</text></g>
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze"/>
+      <rect x="680" y="188" width="280" height="90" rx="12" fill="#0a0e16" stroke="#2a3550" stroke-width="1.6" stroke-dasharray="5 5"/>
+      <text x="704" y="238" font-size="30" opacity="0.4">🔒</text><text x="748" y="228" font-size="15" font-weight="bold" fill="#5a6b8c">??? Next</text><text x="748" y="252" font-size="12" fill="#5a6b8c">LOCKED</text></g>
+  </g>
+</svg>
