@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 320" width="840" height="320" fill="none" font-family="'Courier New',monospace">
+  <defs>
+    <linearGradient id="tbar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
+    <filter id="fs" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>.win{fill:#0a0a12}.txt{fill:#cfe3ff}.dim{fill:#7f9bc0}
+      @media (prefers-color-scheme: light){.win{fill:#0e1726}.txt{fill:#e6eef9}.dim{fill:#9fb6d6}}</style>
+  </defs>
+  <rect class="win" x="2" y="2" width="836" height="316" rx="14" fill="#0a0a12" stroke="url(#tbar)" stroke-width="2"/>
+  <rect x="2" y="2" width="836" height="38" rx="14" fill="#12121f"/><rect x="2" y="26" width="836" height="14" fill="#12121f"/>
+  <circle cx="28" cy="22" r="6" fill="#ff5f57"/><circle cx="50" cy="22" r="6" fill="#febc2e"/><circle cx="72" cy="22" r="6" fill="#28c840"/>
+  <text x="420" y="27" text-anchor="middle" font-size="13" fill="#6a7a99">neurohtop — brain process monitor</text>
+
+  <text x="24" y="68" font-size="13" font-weight="bold" fill="#00f0ff">PID  PROCESS              CPU            STATUS</text>
+  <line x1="24" y1="78" x2="816" y2="78" stroke="#1b2b45"/>
+
+  <g font-size="14">
+    <!-- row helper: bar bg + bar fill(animate) + texts -->
+    <text class="txt" x="24" y="108" fill="#cfe3ff">001  agent_loop.py</text>
+    <rect x="300" y="97" width="300" height="13" rx="3" fill="#16263f"/><rect x="300" y="97" height="13" rx="3" fill="url(#tbar)"><animate attributeName="width" values="0;264" dur="1.2s" fill="freeze"/><animate attributeName="opacity" values="1;0.7;1" dur="1.5s" begin="1.2s" repeatCount="indefinite"/></rect>
+    <text x="620" y="108" font-size="13" fill="#28c840">88% RUNNING</text>
+
+    <text class="txt" x="24" y="140" fill="#cfe3ff">002  paper_writing.tex</text>
+    <rect x="300" y="129" width="300" height="13" rx="3" fill="#16263f"/><rect x="300" y="129" height="13" rx="3" fill="url(#tbar)"><animate attributeName="width" values="0;192" dur="1.2s" begin="0.2s" fill="freeze"/></rect>
+    <text x="620" y="140" font-size="13" fill="#28c840">64% RUNNING</text>
+
+    <text class="txt" x="24" y="172" fill="#cfe3ff">003  idea_generator</text>
+    <rect x="300" y="161" width="300" height="13" rx="3" fill="#16263f"/><rect x="300" y="161" height="13" rx="3" fill="url(#tbar)"><animate attributeName="width" values="0;282" dur="1.2s" begin="0.4s" fill="freeze"/><animate attributeName="opacity" values="1;0.7;1" dur="1.3s" begin="1.6s" repeatCount="indefinite"/></rect>
+    <text x="620" y="172" font-size="13" fill="#28c840">94% RUNNING</text>
+
+    <text class="txt" x="24" y="204" fill="#cfe3ff">004  coffee_intake</text>
+    <rect x="300" y="193" width="300" height="13" rx="3" fill="#16263f"/><rect x="300" y="193" height="13" rx="3" fill="url(#tbar)"><animate attributeName="width" values="0;138" dur="1.2s" begin="0.6s" fill="freeze"/></rect>
+    <text x="620" y="204" font-size="13" fill="#febc2e">46% REFILL</text>
+
+    <text class="txt" x="24" y="236" fill="#cfe3ff">005  sleep.exe</text>
+    <rect x="300" y="225" width="300" height="13" rx="3" fill="#16263f"/><rect x="300" y="225" height="13" rx="3" fill="#3a4a66"><animate attributeName="width" values="0;36" dur="1.2s" begin="0.8s" fill="freeze"/></rect>
+    <text x="620" y="236" font-size="13" fill="#ff5f57">12% SUSPENDED</text>
+  </g>
+
+  <line x1="24" y1="256" x2="816" y2="256" stroke="#1b2b45"/>
+  <text class="dim" x="24" y="284" font-size="13" fill="#7f9bc0">load average:  ideas ↑   bugs ↓   agents = ∞   uptime = since 2023</text>
+  <text x="24" y="304" font-size="12" fill="#5a6b8c">$ status: building agents that actually work<tspan fill="#00f0ff">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+</svg>
