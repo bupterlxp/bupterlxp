@@ -1,25 +1,36 @@
-<h1 align="center">Hi there, I'm Xinping Lei (bupterlxp) 👋</h1>
-<h3 align="center">🤖 大模型 & 智能体研究者 | LLM / Agent Researcher @ BUPT</h3>
-
+<!-- ⚡ NEON HERO BANNER (自托管 SVG，国内不碎图) -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=620&lines=LLM+%2B+Agent+Researcher;Multi-Agent+Systems+%26+Agentic+Coding;Reasoning%2C+Alignment+%26+Idea+Generation;Turning+research+into+real+tools+%F0%9F%9A%80" alt="Typing SVG" />
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/banner.svg" alt="Xinping Lei — LLM / Agent Researcher" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://img.shields.io/badge/Google_Scholar-Xinping_Lei-4285F4?style=flat-square&logo=googlescholar&logoColor=white" /></a>
-  <img src="https://img.shields.io/badge/Affiliation-BUPT-7AA2F7?style=flat-square&logo=academia&logoColor=white" />
-  <img src="https://komarev.com/ghpvc/?username=bupterlxp&color=7AA2F7&style=flat-square&label=Profile+Views" />
-  <img src="https://img.shields.io/github/followers/bupterlxp?label=Followers&style=flat-square&color=7AA2F7&logo=github" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=00F0FF&center=true&vCenter=true&width=640&lines=Building+LLM+Agents+that+actually+work;Multi-Agent+Systems+%26+Agentic+Coding;Reasoning%2C+Alignment+%26+Idea+Generation;Turning+research+into+real+tools+%E2%9A%A1" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://img.shields.io/badge/Google_Scholar-00F0FF?style=for-the-badge&logo=googlescholar&logoColor=black" /></a>
+  <img src="https://img.shields.io/badge/BUPT-A855F7?style=for-the-badge&logo=academia&logoColor=white" />
+  <img src="https://img.shields.io/badge/LLM_·_Agent-FF00E5?style=for-the-badge&logo=openai&logoColor=white" />
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=bupterlxp&color=00f0ff&style=flat-square&label=PROFILE+VIEWS" />
+  <img src="https://img.shields.io/github/followers/bupterlxp?label=FOLLOWERS&style=flat-square&color=ff00e5&logo=github" />
 </p>
 
 ---
 
-### 🧠 关于我
+### <img src="https://img.shields.io/badge/-00F0FF?style=flat-square" height="14"/> 🧠 关于我
 
-- 🎓 北京邮电大学（**BUPT**）在读，聚焦 **大模型（LLM）** 与 **智能体（Agent）** 研究
-- 🔬 研究关键词：**Multi-Agent 系统 · Agentic Coding · LLM 推理与对齐 · 科研创意生成（Idea Generation）**
-- 🛠️ 信奉「研究要落地」：从评测基准到自动化系统，让模型不只是会聊天，而是会**干活**
-- 🌱 持续探索 LLM 应用落地与 Agent 架构设计
+```python
+class XinpingLei:
+    def __init__(self):
+        self.affiliation = "北京邮电大学 · BUPT"
+        self.focus       = ["LLM", "Agent", "Idea Generation"]
+        self.keywords    = ["Multi-Agent", "Agentic Coding",
+                            "Reasoning & Alignment", "AIGC Orchestration"]
+        self.motto       = "让模型不只是会聊天，而是会干活 ⚡"
+```
 
 ---
 
@@ -27,7 +38,7 @@
 
 | 方向 | 代表工作 |
 |------|----------|
-| 🧩 **Multi-Agent 系统与编排** | AutoMV（音乐视频生成多智能体）· Vibe AIGC（Agentic Orchestration） |
+| 🧩 **Multi-Agent 系统与编排** | AutoMV（音乐视频生成多智能体）· Vibe AIGC |
 | 💻 **Agentic Coding 与评测** | SWE-Compass · WebCompass · Solvita · CodeTracer |
 | 🧠 **LLM 推理 / 指令遵循 / 对齐** | HiPO · Inverse IFEval · KAT-Coder |
 | 💡 **科研创意生成（Ideation）** | MotivGraph-SoIQ (EMNLP 2025 Findings) · MMG2Skill |
@@ -75,4 +86,6 @@
 
 ### 🐍 贡献动画
 
-![Snake animation](https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg" alt="Snake animation" />
+</p>
