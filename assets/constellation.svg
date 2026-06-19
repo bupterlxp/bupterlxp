@@ -1,13 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" fill="none" font-family="'Courier New',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 520" width="1000" height="520" fill="none" font-family="'Courier New',monospace">
   <defs>
     <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
     <filter id="fg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <filter id="fs" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path class="grd" d="M34 0 L0 0 0 34" fill="none" stroke="#0f1d33" stroke-width="1"/></pattern>
     <style>
-      .bg{fill:#07070d}.ln{stroke:#1b3a5a}.lbl{fill:#cfe3ff}.sub{fill:#7fdfff}.hub{fill:#cfe3ff}
+      .bg{fill:#07070d}.grd{stroke:#0f1d33}.ln{stroke:#1b3a5a}.lbl{fill:#cfe3ff}.sub{fill:#7fdfff}.hub{fill:#cfe3ff}
+      a{cursor:pointer}
       @media (prefers-color-scheme: light){
-        .bg{fill:#eef3fb}.grd{stroke:#c7d4ea}.ln{stroke:#9bb3d6}.lbl{fill:#1f2d44}.sub{fill:#2b5b8c}.hub{fill:#102036}
+        .bg{fill:#f4f8fe}.grd{stroke:#dbe6f5}.ln{stroke:#b3c7e3}.lbl{fill:#2b4a73}.sub{fill:#1f6f9c}.hub{fill:#0d2740}
       }
     </style>
   </defs>
@@ -15,15 +16,14 @@
   <rect class="bg" x="3" y="3" width="994" height="514" rx="16" fill="#07070d" stroke="url(#g1)" stroke-width="2"><animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/></rect>
   <rect x="3" y="3" width="994" height="514" rx="16" fill="url(#grid)" opacity="0.5"/>
   <text x="30" y="46" font-size="20" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="2">// PAPER CONSTELLATION · 论文星图</text>
+  <text class="sub" x="970" y="46" text-anchor="end" font-size="12" fill="#7fdfff">▶ 点击节点跳 arXiv</text>
 
-  <!-- links: center -> hubs -->
   <g class="ln" stroke="#1b3a5a" stroke-width="1.6">
     <line x1="500" y1="285" x2="230" y2="185"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/></line>
     <line x1="500" y1="285" x2="765" y2="185"><animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/></line>
     <line x1="500" y1="285" x2="255" y2="395"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.4s" repeatCount="indefinite"/></line>
     <line x1="500" y1="285" x2="745" y2="395"><animate attributeName="opacity" values="1;0.4;1" dur="3.4s" repeatCount="indefinite"/></line>
   </g>
-  <!-- links: hub -> papers -->
   <g class="ln" stroke="#15314d" stroke-width="1">
     <line x1="230" y1="185" x2="130" y2="120"/><line x1="230" y1="185" x2="118" y2="225"/><line x1="230" y1="185" x2="320" y2="108"/>
     <line x1="765" y1="185" x2="700" y2="108"/><line x1="765" y1="185" x2="888" y2="135"/><line x1="765" y1="185" x2="876" y2="240"/>
@@ -31,35 +31,18 @@
     <line x1="745" y1="395" x2="648" y2="468"/><line x1="745" y1="395" x2="862" y2="446"/>
   </g>
 
-  <!-- paper nodes (twinkle) -->
-  <g>
-    <g fill="#00f0ff"><circle cx="130" cy="120" r="4"><animate attributeName="r" values="3;5;3" dur="2.2s" repeatCount="indefinite"/></circle>
-      <circle cx="118" cy="225" r="4"><animate attributeName="r" values="4;3;4" dur="2.6s" repeatCount="indefinite"/></circle>
-      <circle cx="320" cy="108" r="4"><animate attributeName="r" values="3;5;3" dur="2.9s" repeatCount="indefinite"/></circle></g>
-    <g fill="#ff00e5"><circle cx="700" cy="108" r="4"><animate attributeName="r" values="4;3;4" dur="2.4s" repeatCount="indefinite"/></circle>
-      <circle cx="888" cy="135" r="4"><animate attributeName="r" values="3;5;3" dur="2.7s" repeatCount="indefinite"/></circle>
-      <circle cx="876" cy="240" r="4"><animate attributeName="r" values="4;3;4" dur="3.1s" repeatCount="indefinite"/></circle></g>
-    <g fill="#a855f7"><circle cx="135" cy="345" r="4"><animate attributeName="r" values="3;5;3" dur="2.5s" repeatCount="indefinite"/></circle>
-      <circle cx="140" cy="455" r="4"><animate attributeName="r" values="4;3;4" dur="2.8s" repeatCount="indefinite"/></circle>
-      <circle cx="320" cy="470" r="4"><animate attributeName="r" values="3;5;3" dur="3.0s" repeatCount="indefinite"/></circle></g>
-    <g fill="#28c840"><circle cx="648" cy="468" r="4"><animate attributeName="r" values="4;3;4" dur="2.3s" repeatCount="indefinite"/></circle>
-      <circle cx="862" cy="446" r="4"><animate attributeName="r" values="3;5;3" dur="2.9s" repeatCount="indefinite"/></circle></g>
-  </g>
-
-  <!-- paper labels -->
-  <g class="lbl" font-size="12" fill="#cfe3ff">
-    <text x="130" y="108" text-anchor="middle">AutoMV</text>
-    <text x="108" y="244" text-anchor="middle">Vibe AIGC</text>
-    <text x="320" y="96" text-anchor="middle">CodeTracer</text>
-    <text x="700" y="96" text-anchor="middle">SWE-Compass</text>
-    <text x="888" y="123" text-anchor="middle">WebCompass</text>
-    <text x="888" y="258" text-anchor="middle">Solvita</text>
-    <text x="135" y="333" text-anchor="middle">HiPO</text>
-    <text x="140" y="474" text-anchor="middle">Inverse IFEval</text>
-    <text x="320" y="490" text-anchor="middle">KAT-Coder</text>
-    <text x="640" y="487" text-anchor="middle">MotivGraph-SoIQ</text>
-    <text x="862" y="464" text-anchor="middle">MMG2Skill</text>
-  </g>
+  <!-- paper nodes (clickable -> arXiv) -->
+  <a xlink:href="https://arxiv.org/abs/2512.12196" href="https://arxiv.org/abs/2512.12196" target="_blank"><circle cx="130" cy="120" r="4" fill="#00f0ff"><animate attributeName="r" values="3;5;3" dur="2.2s" repeatCount="indefinite"/></circle><text class="lbl" x="130" y="108" text-anchor="middle" font-size="12" fill="#cfe3ff">AutoMV</text></a>
+  <a xlink:href="https://arxiv.org/abs/2602.04575" href="https://arxiv.org/abs/2602.04575" target="_blank"><circle cx="118" cy="225" r="4" fill="#00f0ff"><animate attributeName="r" values="4;3;4" dur="2.6s" repeatCount="indefinite"/></circle><text class="lbl" x="108" y="244" text-anchor="middle" font-size="12" fill="#cfe3ff">Vibe AIGC</text></a>
+  <a xlink:href="https://arxiv.org/abs/2604.11641" href="https://arxiv.org/abs/2604.11641" target="_blank"><circle cx="320" cy="108" r="4" fill="#00f0ff"><animate attributeName="r" values="3;5;3" dur="2.9s" repeatCount="indefinite"/></circle><text class="lbl" x="320" y="96" text-anchor="middle" font-size="12" fill="#cfe3ff">CodeTracer</text></a>
+  <a xlink:href="https://arxiv.org/abs/2511.05459" href="https://arxiv.org/abs/2511.05459" target="_blank"><circle cx="700" cy="108" r="4" fill="#ff00e5"><animate attributeName="r" values="4;3;4" dur="2.4s" repeatCount="indefinite"/></circle><text class="lbl" x="700" y="96" text-anchor="middle" font-size="12" fill="#cfe3ff">SWE-Compass</text></a>
+  <a xlink:href="https://arxiv.org/abs/2604.18224" href="https://arxiv.org/abs/2604.18224" target="_blank"><circle cx="888" cy="135" r="4" fill="#ff00e5"><animate attributeName="r" values="3;5;3" dur="2.7s" repeatCount="indefinite"/></circle><text class="lbl" x="888" y="123" text-anchor="middle" font-size="12" fill="#cfe3ff">WebCompass</text></a>
+  <a xlink:href="https://arxiv.org/abs/2605.15301" href="https://arxiv.org/abs/2605.15301" target="_blank"><circle cx="876" cy="240" r="4" fill="#ff00e5"><animate attributeName="r" values="4;3;4" dur="3.1s" repeatCount="indefinite"/></circle><text class="lbl" x="888" y="258" text-anchor="middle" font-size="12" fill="#cfe3ff">Solvita</text></a>
+  <a xlink:href="https://arxiv.org/abs/2509.23967" href="https://arxiv.org/abs/2509.23967" target="_blank"><circle cx="135" cy="345" r="4" fill="#a855f7"><animate attributeName="r" values="3;5;3" dur="2.5s" repeatCount="indefinite"/></circle><text class="lbl" x="135" y="333" text-anchor="middle" font-size="12" fill="#cfe3ff">HiPO</text></a>
+  <a xlink:href="https://arxiv.org/abs/2509.04292" href="https://arxiv.org/abs/2509.04292" target="_blank"><circle cx="140" cy="455" r="4" fill="#a855f7"><animate attributeName="r" values="4;3;4" dur="2.8s" repeatCount="indefinite"/></circle><text class="lbl" x="140" y="474" text-anchor="middle" font-size="12" fill="#cfe3ff">Inverse IFEval</text></a>
+  <a xlink:href="https://arxiv.org/abs/2510.18779" href="https://arxiv.org/abs/2510.18779" target="_blank"><circle cx="320" cy="470" r="4" fill="#a855f7"><animate attributeName="r" values="3;5;3" dur="3.0s" repeatCount="indefinite"/></circle><text class="lbl" x="320" y="490" text-anchor="middle" font-size="12" fill="#cfe3ff">KAT-Coder</text></a>
+  <a xlink:href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&amp;hl=zh-CN" href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&amp;hl=zh-CN" target="_blank"><circle cx="648" cy="468" r="4" fill="#28c840"><animate attributeName="r" values="4;3;4" dur="2.3s" repeatCount="indefinite"/></circle><text class="lbl" x="640" y="487" text-anchor="middle" font-size="12" fill="#cfe3ff">MotivGraph-SoIQ</text></a>
+  <a xlink:href="https://arxiv.org/abs/2606.01993" href="https://arxiv.org/abs/2606.01993" target="_blank"><circle cx="862" cy="446" r="4" fill="#28c840"><animate attributeName="r" values="3;5;3" dur="2.9s" repeatCount="indefinite"/></circle><text class="lbl" x="862" y="464" text-anchor="middle" font-size="12" fill="#cfe3ff">MMG2Skill</text></a>
 
   <!-- hubs -->
   <g filter="url(#fs)" font-size="13" font-weight="bold">
@@ -69,9 +52,10 @@
     <circle cx="745" cy="395" r="9" fill="#28c840"/><text class="sub" x="745" y="420" text-anchor="middle" fill="#7fdfff">Idea Generation</text>
   </g>
 
-  <!-- center super-hub -->
-  <circle cx="500" cy="285" r="34" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.6"><animate attributeName="r" values="30;38;30" dur="3s" repeatCount="indefinite"/></circle>
-  <circle cx="500" cy="285" r="14" fill="url(#g1)" filter="url(#fg)"><animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/></circle>
-  <text class="hub" x="500" y="289" text-anchor="middle" font-size="13" font-weight="bold" fill="#cfe3ff">LEI</text>
+  <a xlink:href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&amp;hl=zh-CN" href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&amp;hl=zh-CN" target="_blank">
+    <circle cx="500" cy="285" r="34" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.6"><animate attributeName="r" values="30;38;30" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="500" cy="285" r="14" fill="url(#g1)" filter="url(#fg)"><animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/></circle>
+    <text class="hub" x="500" y="289" text-anchor="middle" font-size="13" font-weight="bold" fill="#cfe3ff">LEI</text>
+  </a>
   <text x="500" y="340" text-anchor="middle" font-size="13" fill="#a855f7" font-weight="bold">11 papers · h-index 4</text>
 </svg>
