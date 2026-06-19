@@ -20,6 +20,10 @@
   <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/dashboard.svg" alt="Control Deck" width="94%" />
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/quotes.svg" alt="rotating quotes" width="88%" />
+</p>
+
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
 ## 🌌 论文星图
@@ -31,7 +35,29 @@
 🔗 **点击直达 arXiv**（GitHub 内嵌图中节点不可点，附链接表）：
 [AutoMV](https://arxiv.org/abs/2512.12196) · [Vibe AIGC](https://arxiv.org/abs/2602.04575) · [CodeTracer](https://arxiv.org/abs/2604.11641) · [SWE-Compass](https://arxiv.org/abs/2511.05459) · [WebCompass](https://arxiv.org/abs/2604.18224) · [Solvita](https://arxiv.org/abs/2605.15301) · [HiPO](https://arxiv.org/abs/2509.23967) · [Inverse IFEval](https://arxiv.org/abs/2509.04292) · [KAT-Coder](https://arxiv.org/abs/2510.18779) · [MotivGraph-SoIQ](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN) · [MMG2Skill](https://arxiv.org/abs/2606.01993)
 
-> 🌓 全站自托管图支持**浅/深色自适应**（清爽蓝白 ↔ 赛博霓虹）；右上角节日皮肤随日期自动切换（当前：⚽ FIFA World Cup 2026）。
+> 🌓 全站自托管图支持**浅/深色自适应**（清爽蓝白 ↔ 赛博霓虹）；右上角节日皮肤随日期自动切换（当前：⚽ FIFA World Cup 2026 决赛倒计时）。
+
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+
+## 🗺️ 学术时间轴
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/timeline.svg" alt="academic timeline" width="92%" />
+</p>
+
+## 🏆 成就墙
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/achievements.svg" alt="achievements" width="92%" />
+</p>
+
+## 📰 arXiv 今日精选
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/arxiv.svg" alt="arXiv pick of the day" width="92%" />
+</p>
+
+> 🤖 由 GitHub Action 每日从 arXiv API 自动抓取最新 cs.CL 论文
 
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
@@ -77,6 +103,10 @@
   <img src="https://img.shields.io/badge/-LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" />
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/cube.svg" alt="3D skill cube" width="240" />
+</p>
+
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
 ## 🧑‍💻 ASCII 自画像
@@ -92,6 +122,12 @@
      |    ___     | /          > Idea Generation
      |___/   \___|/            $ ./build --agents  ⚡
 ```
+
+## 🧠 大脑进程监视器
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/htop.svg" alt="brain process monitor" width="80%" />
+</p>
 
 ## 🐍 贡献动画
 
