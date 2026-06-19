@@ -25,10 +25,13 @@
 ## 🌌 论文星图
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/constellation.svg" alt="paper constellation" width="92%" />
+  <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/constellation.svg" alt="paper constellation" width="92%" /></a>
 </p>
 
-> 🌓 全站自托管图均支持**浅/深色自适应**；右上角节日皮肤随日期自动切换（当前：⚽ FIFA World Cup 2026）。
+🔗 **点击直达 arXiv**（GitHub 内嵌图中节点不可点，附链接表）：
+[AutoMV](https://arxiv.org/abs/2512.12196) · [Vibe AIGC](https://arxiv.org/abs/2602.04575) · [CodeTracer](https://arxiv.org/abs/2604.11641) · [SWE-Compass](https://arxiv.org/abs/2511.05459) · [WebCompass](https://arxiv.org/abs/2604.18224) · [Solvita](https://arxiv.org/abs/2605.15301) · [HiPO](https://arxiv.org/abs/2509.23967) · [Inverse IFEval](https://arxiv.org/abs/2509.04292) · [KAT-Coder](https://arxiv.org/abs/2510.18779) · [MotivGraph-SoIQ](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN) · [MMG2Skill](https://arxiv.org/abs/2606.01993)
+
+> 🌓 全站自托管图支持**浅/深色自适应**（清爽蓝白 ↔ 赛博霓虹）；右上角节日皮肤随日期自动切换（当前：⚽ FIFA World Cup 2026）。
 
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
@@ -76,8 +79,33 @@
 
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
+## 🧑‍💻 ASCII 自画像
+
+```
+        ______________
+       /             /|        🎓 PhD-bound 2026.09
+      /   X. LEI    / |
+     /____________ /  |        LLM · Agent Researcher @ BUPT
+     |  ___   ___ |   |        ─────────────────────────────
+     | |o.o| |o.o||   /        > Multi-Agent · Agentic Coding
+     |  \_/   \_/ |  /         > Reasoning · Alignment
+     |    ___     | /          > Idea Generation
+     |___/   \___|/            $ ./build --agents  ⚡
+```
+
 ## 🐍 贡献动画
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg" alt="snake" width="100%" />
+</p>
+
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+
+## 📫 友链 / Connect
+
+<p align="center">
+  <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://img.shields.io/badge/Google_Scholar-00F0FF?style=for-the-badge&logo=googlescholar&logoColor=black" /></a>
+  <a href="https://github.com/bupterlxp"><img src="https://img.shields.io/badge/GitHub-A855F7?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://arxiv.org/a/lei_x_1"><img src="https://img.shields.io/badge/arXiv-FF00E5?style=for-the-badge&logo=arxiv&logoColor=white" /></a>
+  <a href="mailto:bupterlxp@bupt.edu.cn"><img src="https://img.shields.io/badge/Email-28C840?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
