@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""自托管主页资源生成器：抓取真实 GitHub 数据，重渲染 stats.svg 与 activity.svg。
-零第三方依赖。由 .github/workflows/profile-refresh.yml 定时调用，也可本地运行。
-学术指标（无公开 API）作为常量手动维护：改这三个数字即可。"""
-import os, json, urllib.request, datetime
+"""自托管主页资源生成器：抓取真实 GitHub 数据，渲染单张合并大图 dashboard.svg
+（whoami 终端 + 技能雷达 + 战绩 + 最近动态 + 入学喜讯 + 状态栏）。
+零第三方依赖。由 .github/workflows/profile-refresh.yml 定时调用，也可本地运行。"""
+import os, json, urllib.request
 
-# —— 手动维护的学术指标（来自 Google Scholar）——
-PUBLICATIONS = 11
-CITATIONS    = 23
-HINDEX       = 4
+# —— 手动维护：学术指标（来自 Google Scholar）——
+PUBLICATIONS, CITATIONS, HINDEX = 11, 23, 4
+# —— 手动维护：入学/履历喜讯 ——
+INCOMING_WHEN = "2026.09"
+INCOMING_TEXT = "南京大学 × 北京中关村学院 · 联合培养项目"
 
 USER  = os.environ.get("GH_USER", "bupterlxp")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -21,8 +22,10 @@ def api(path):
         return json.load(r)
 
 def esc(s):
-    return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-            .replace('"', "&quot;"))
+    return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;"))
+
+def bar(value, ref, cap=250):
+    return max(25, min(cap, round(value / ref * cap)))
 
 def main():
     user  = api(f"/users/{USER}")
@@ -32,78 +35,133 @@ def main():
     public    = user["public_repos"]
     stars     = sum(r["stargazers_count"] for r in owned)
     since     = user["created_at"][:4]
-
-    # 最新有动态的仓库（排除 profile 仓库本身）
-    latest = next((r for r in owned if r["name"].lower() != USER.lower()), owned[0])
-    os.makedirs("assets", exist_ok=True)
-    write_stats(public, followers, stars, since)
-    write_activity(latest)
-    print("generated stats.svg & activity.svg")
-
-def bar(value, ref):
-    return max(30, min(380, round(value / ref * 380)))
-
-def write_stats(public, followers, stars, since):
+    latest    = next((r for r in owned if r["name"].lower() != USER.lower()), owned[0])
+    name = esc(latest["name"]); desc = esc((latest.get("description") or "—")[:74])
+    lang = esc(latest.get("language") or "—"); when = latest["pushed_at"][:10]
     bp, bc, br, bs = bar(PUBLICATIONS,15), bar(CITATIONS,30), bar(public,15), bar(max(stars,1),10)
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360" fill="none">
-  <defs>
-    <linearGradient id="snn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
-    <filter id="sg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="ssg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <pattern id="sgrid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 L0 0 0 34" fill="none" stroke="#10203a" stroke-width="1"/></pattern>
-    <clipPath id="nw"><rect x="34" y="80" width="0" height="90"><animate attributeName="width" from="0" to="932" dur="1s" begin="0.3s" fill="freeze"/></rect></clipPath>
-  </defs>
-  <rect x="3" y="3" width="994" height="354" rx="16" fill="#07070d" stroke="url(#snn)" stroke-width="2"><animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite"/></rect>
-  <rect x="3" y="3" width="994" height="354" rx="16" fill="url(#sgrid)" opacity="0.5"/>
-  <text x="34" y="52" font-family="'Courier New',monospace" font-size="22" font-weight="bold" fill="#00f0ff" filter="url(#ssg)" letter-spacing="2">// RESEARCH × CODE — SYSTEM PROFILE</text>
-  <text x="966" y="52" text-anchor="end" font-family="'Courier New',monospace" font-size="14" font-weight="bold" fill="#28c840">● ONLINE<animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></text>
-  <line x1="34" y1="68" x2="966" y2="68" stroke="#1b2b45" stroke-width="1"/>
-  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.2s" fill="freeze"/>
-    <text x="40" y="118" font-family="'Courier New',monospace" font-size="14" fill="#7fdfff" letter-spacing="2">PUBLICATIONS</text>
-    <text x="40" y="158" font-family="'Courier New',monospace" font-size="40" font-weight="bold" fill="#00f0ff" filter="url(#sg)">{PUBLICATIONS}</text>
-    <rect x="40" y="172" height="6" rx="3" fill="#16263f"/><rect x="40" y="172" height="6" rx="3" fill="url(#snn)"><animate attributeName="width" from="0" to="{bp}" dur="1.3s" begin="0.4s" fill="freeze"/></rect></g>
-  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.5s" fill="freeze"/>
-    <text x="40" y="218" font-family="'Courier New',monospace" font-size="14" fill="#7fdfff" letter-spacing="2">CITATIONS</text>
-    <text x="40" y="258" font-family="'Courier New',monospace" font-size="40" font-weight="bold" fill="#a855f7" filter="url(#sg)">{CITATIONS}</text>
-    <rect x="40" y="272" height="6" rx="3" fill="#16263f"/><rect x="40" y="272" height="6" rx="3" fill="url(#snn)"><animate attributeName="width" from="0" to="{bc}" dur="1.3s" begin="0.7s" fill="freeze"/></rect></g>
-  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.8s" fill="freeze"/>
-    <text x="40" y="318" font-family="'Courier New',monospace" font-size="14" fill="#7fdfff" letter-spacing="2">h-INDEX</text>
-    <text x="40" y="346" font-family="'Courier New',monospace" font-size="30" font-weight="bold" fill="#ff00e5" filter="url(#sg)">{HINDEX}</text></g>
-  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.35s" fill="freeze"/>
-    <text x="540" y="118" font-family="'Courier New',monospace" font-size="14" fill="#7fdfff" letter-spacing="2">PUBLIC REPOS</text>
-    <text x="540" y="158" font-family="'Courier New',monospace" font-size="40" font-weight="bold" fill="#00f0ff" filter="url(#sg)">{public}</text>
-    <rect x="540" y="172" height="6" rx="3" fill="#16263f"/><rect x="540" y="172" height="6" rx="3" fill="url(#snn)"><animate attributeName="width" from="0" to="{br}" dur="1.3s" begin="0.55s" fill="freeze"/></rect></g>
-  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.65s" fill="freeze"/>
-    <text x="540" y="218" font-family="'Courier New',monospace" font-size="14" fill="#7fdfff" letter-spacing="2">TOTAL STARS</text>
-    <text x="540" y="258" font-family="'Courier New',monospace" font-size="40" font-weight="bold" fill="#a855f7" filter="url(#sg)">{stars}</text>
-    <rect x="540" y="272" height="6" rx="3" fill="#16263f"/><rect x="540" y="272" height="6" rx="3" fill="url(#snn)"><animate attributeName="width" from="0" to="{bs}" dur="1.3s" begin="0.85s" fill="freeze"/></rect></g>
-  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.95s" fill="freeze"/>
-    <text x="540" y="318" font-family="'Courier New',monospace" font-size="14" fill="#7fdfff" letter-spacing="2">FOLLOWERS · SINCE</text>
-    <text x="540" y="346" font-family="'Courier New',monospace" font-size="30" font-weight="bold" fill="#ff00e5" filter="url(#sg)">{followers} · {since}</text></g>
-</svg>'''
-    open("assets/stats.svg", "w", encoding="utf-8").write(svg)
 
-def write_activity(repo):
-    name = esc(repo["name"])
-    desc = esc((repo.get("description") or "—")[:78])
-    lang = esc(repo.get("language") or "—")
-    when = repo["pushed_at"][:10]
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 150" width="1000" height="150" fill="none">
+    os.makedirs("assets", exist_ok=True)
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="1000" height="900" fill="none" font-family="'Courier New',monospace">
   <defs>
-    <linearGradient id="ann" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
-    <filter id="ag" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <pattern id="agrid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0 L0 0 0 30" fill="none" stroke="#10203a" stroke-width="1"/></pattern>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff" stop-opacity="0"/><stop offset="0.5" stop-color="#00f0ff" stop-opacity="0.4"/><stop offset="1" stop-color="#00f0ff" stop-opacity="0"/></linearGradient>
+    <filter id="fg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="fs" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 L0 0 0 34" fill="none" stroke="#0f1d33" stroke-width="1"/></pattern>
   </defs>
-  <rect x="3" y="3" width="994" height="144" rx="14" fill="#07070d" stroke="url(#ann)" stroke-width="2"/>
-  <rect x="3" y="3" width="994" height="144" rx="14" fill="url(#agrid)" opacity="0.5"/>
-  <circle cx="34" cy="38" r="6" fill="#28c840" filter="url(#ag)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
-  <text x="52" y="43" font-family="'Courier New',monospace" font-size="16" font-weight="bold" fill="#00f0ff" letter-spacing="2">// LATEST SIGNAL · 最近动态</text>
-  <text x="34" y="88" font-family="'Courier New',monospace" font-size="30" font-weight="bold" fill="url(#ann)" filter="url(#ag)">{name}</text>
-  <text x="34" y="118" font-family="'Courier New',monospace" font-size="15" fill="#cfe3ff">{desc}</text>
-  <text x="966" y="88" text-anchor="end" font-family="'Courier New',monospace" font-size="14" font-weight="bold" fill="#a855f7">◈ {lang}</text>
-  <text x="966" y="118" text-anchor="end" font-family="'Courier New',monospace" font-size="13" fill="#ff4fd8">⟳ {when}</text>
+
+  <!-- frame -->
+  <rect x="3" y="3" width="994" height="894" rx="18" fill="#07070d" stroke="url(#g1)" stroke-width="2"><animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/></rect>
+  <rect x="3" y="3" width="994" height="894" rx="18" fill="url(#grid)" opacity="0.5"/>
+  <rect x="-300" y="0" width="300" height="900" fill="url(#scan)" opacity="0.10"><animate attributeName="x" values="-300;1000" dur="7s" repeatCount="indefinite"/></rect>
+
+  <!-- title bar -->
+  <text x="30" y="40" font-size="22" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="2">// XINPING LEI — CONTROL DECK</text>
+  <text x="970" y="40" text-anchor="end" font-size="14" font-weight="bold" fill="#28c840">● ONLINE<animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></text>
+  <line x1="20" y1="56" x2="980" y2="56" stroke="#1b2b45"/>
+  <line x1="552" y1="56" x2="552" y2="420" stroke="#1b2b45"/>
+
+  <!-- ===== WHOAMI ===== -->
+  <text x="30" y="88" font-size="15" font-weight="bold" fill="#7fdfff" letter-spacing="2">// WHOAMI</text>
+  <g font-size="15" filter="url(#fs)">
+    <text x="30" y="120" fill="#28c840">$ whoami<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.2s" fill="freeze"/></text>
+    <text x="30" y="146" fill="#cfe3ff">→ <tspan fill="#00f0ff" font-weight="bold">Xinping Lei</tspan> · LLM/Agent Researcher @ BUPT<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/></text>
+    <text x="30" y="180" fill="#28c840">$ cat research_focus.txt<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/></text>
+    <text x="30" y="206" fill="#a855f7">→ Multi-Agent · Agentic Orchestration<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.4s" fill="freeze"/></text>
+    <text x="30" y="230" fill="#a855f7">→ Agentic Coding &amp; Evaluation<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.7s" fill="freeze"/></text>
+    <text x="30" y="254" fill="#a855f7">→ LLM Reasoning · Alignment · Ideation<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2s" fill="freeze"/></text>
+    <text x="30" y="296" fill="#28c840">$ ./mission --now<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2.4s" fill="freeze"/></text>
+    <text x="30" y="322" fill="#ff4fd8" font-weight="bold">→ build agents that actually work.<tspan fill="#00f0ff">█<animate attributeName="opacity" values="1;0;1" dur="1s" begin="2.9s" repeatCount="indefinite"/></tspan><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2.8s" fill="freeze"/></text>
+  </g>
+  <text x="30" y="372" font-size="13" fill="#5a6b8c">$ uptime → researching since {since} · 北京邮电大学</text>
+
+  <!-- ===== SKILL RADAR (embedded, scaled) ===== -->
+  <g transform="translate(566,60) scale(0.88)">
+    <text x="220" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="3">// SKILL RADAR</text>
+    <g stroke="#1b2b45" stroke-width="1" fill="none">
+      <polygon points="220,65 336.9,132.5 336.9,267.5 220,335 103.1,267.5 103.1,132.5"/>
+      <polygon points="220,110.9 297.2,155.4 297.2,244.6 220,289.1 142.8,244.6 142.8,155.4"/>
+      <polygon points="220,155.45 258.6,177.7 258.6,222.3 220,244.55 181.4,222.3 181.4,177.7"/>
+    </g>
+    <g stroke="#12243d" stroke-width="1">
+      <line x1="220" y1="200" x2="220" y2="65"/><line x1="220" y1="200" x2="336.9" y2="132.5"/><line x1="220" y1="200" x2="336.9" y2="267.5"/>
+      <line x1="220" y1="200" x2="220" y2="335"/><line x1="220" y1="200" x2="103.1" y2="267.5"/><line x1="220" y1="200" x2="103.1" y2="132.5"/>
+    </g>
+    <polygon points="220,71.75 327.5,137.9 319.4,257.4 220,308 114.8,260.75 128.8,147.35" fill="url(#g1)" fill-opacity="0" stroke="url(#g1)" stroke-width="2.5" filter="url(#fg)" stroke-dasharray="1200" stroke-dashoffset="1200">
+      <animate attributeName="stroke-dashoffset" from="1200" to="0" dur="1.6s" begin="0.4s" fill="freeze"/>
+      <animate attributeName="fill-opacity" from="0" to="0.32" dur="1s" begin="1.8s" fill="freeze"/>
+    </polygon>
+    <g fill="#00f0ff" filter="url(#fs)">
+      <circle cx="220" cy="71.75" r="3.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/></circle>
+      <circle cx="327.5" cy="137.9" r="3.5" fill="#a855f7"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <circle cx="319.4" cy="257.4" r="3.5" fill="#ff00e5"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <circle cx="220" cy="308" r="3.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.9s" repeatCount="indefinite"/></circle>
+      <circle cx="114.8" cy="260.75" r="3.5" fill="#a855f7"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1.2s" repeatCount="indefinite"/></circle>
+      <circle cx="128.8" cy="147.35" r="3.5" fill="#ff00e5"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1.5s" repeatCount="indefinite"/></circle>
+    </g>
+    <g font-size="14" font-weight="bold" fill="#cfe3ff">
+      <text x="220" y="55" text-anchor="middle">LLM</text>
+      <text x="348" y="132">Agent</text>
+      <text x="348" y="272">Agentic Coding</text>
+      <text x="220" y="358" text-anchor="middle">Reasoning</text>
+      <text x="92" y="272" text-anchor="end">Ideation</text>
+      <text x="92" y="132" text-anchor="end">Systems</text>
+    </g>
+  </g>
+
+  <!-- ===== STATS ===== -->
+  <line x1="20" y1="420" x2="980" y2="420" stroke="#1b2b45"/>
+  <text x="30" y="452" font-size="18" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="2">// RESEARCH × CODE — STATS</text>
+  <g font-weight="bold">
+    <text x="40" y="492" font-size="13" fill="#7fdfff" letter-spacing="1">PUBLICATIONS</text>
+    <text x="40" y="528" font-size="34" fill="#00f0ff" filter="url(#fg)">{PUBLICATIONS}</text>
+    <rect x="40" y="540" height="6" rx="3" fill="#16263f"/><rect x="40" y="540" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="{bp}" dur="1.3s" begin="0.4s" fill="freeze"/></rect>
+    <text x="350" y="492" font-size="13" fill="#7fdfff" letter-spacing="1">CITATIONS</text>
+    <text x="350" y="528" font-size="34" fill="#a855f7" filter="url(#fg)">{CITATIONS}</text>
+    <rect x="350" y="540" height="6" rx="3" fill="#16263f"/><rect x="350" y="540" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="{bc}" dur="1.3s" begin="0.6s" fill="freeze"/></rect>
+    <text x="660" y="492" font-size="13" fill="#7fdfff" letter-spacing="1">h-INDEX</text>
+    <text x="660" y="528" font-size="34" fill="#ff00e5" filter="url(#fg)">{HINDEX}</text>
+    <text x="40" y="576" font-size="13" fill="#7fdfff" letter-spacing="1">PUBLIC REPOS</text>
+    <text x="40" y="612" font-size="34" fill="#00f0ff" filter="url(#fg)">{public}</text>
+    <rect x="40" y="624" height="6" rx="3" fill="#16263f"/><rect x="40" y="624" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="{br}" dur="1.3s" begin="0.8s" fill="freeze"/></rect>
+    <text x="350" y="576" font-size="13" fill="#7fdfff" letter-spacing="1">TOTAL STARS</text>
+    <text x="350" y="612" font-size="34" fill="#a855f7" filter="url(#fg)">{stars}</text>
+    <rect x="350" y="624" height="6" rx="3" fill="#16263f"/><rect x="350" y="624" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="{bs}" dur="1.3s" begin="1s" fill="freeze"/></rect>
+    <text x="660" y="576" font-size="13" fill="#7fdfff" letter-spacing="1">FOLLOWERS · SINCE</text>
+    <text x="660" y="612" font-size="34" fill="#ff00e5" filter="url(#fg)">{followers} · {since}</text>
+  </g>
+
+  <!-- ===== LATEST SIGNAL ===== -->
+  <line x1="20" y1="652" x2="980" y2="652" stroke="#1b2b45"/>
+  <circle cx="34" cy="684" r="6" fill="#28c840" filter="url(#fs)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+  <text x="52" y="689" font-size="15" font-weight="bold" fill="#00f0ff" letter-spacing="2">// LATEST SIGNAL · 最近动态</text>
+  <text x="34" y="726" font-size="26" font-weight="bold" fill="url(#g1)" filter="url(#fg)">{name}</text>
+  <text x="34" y="752" font-size="14" fill="#cfe3ff">{desc}</text>
+  <text x="966" y="722" text-anchor="end" font-size="14" font-weight="bold" fill="#a855f7">◈ {lang}</text>
+  <text x="966" y="748" text-anchor="end" font-size="13" fill="#ff4fd8">⟳ {when}</text>
+
+  <!-- ===== INCOMING (入学喜讯) ===== -->
+  <line x1="20" y1="772" x2="980" y2="772" stroke="#1b2b45"/>
+  <rect x="22" y="782" width="956" height="58" rx="10" fill="#a855f7" fill-opacity="0.08" stroke="url(#g1)" stroke-width="1.4"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/></rect>
+  <text x="42" y="808" font-size="14" font-weight="bold" fill="#28c840">▶ INCOMING · {INCOMING_WHEN}</text>
+  <text x="42" y="830" font-size="17" font-weight="bold" fill="url(#g1)" filter="url(#fs)">🎓 {INCOMING_TEXT}</text>
+  <text x="966" y="820" text-anchor="end" font-size="13" font-weight="bold" fill="#7fdfff">Joint PhD Program · NJU × ZGC Academy</text>
+
+  <!-- ===== STATUS BAR ===== -->
+  <line x1="20" y1="852" x2="980" y2="852" stroke="#1b2b45"/>
+  <circle cx="34" cy="878" r="6" fill="#28c840" filter="url(#fs)"><animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
+  <text x="50" y="883" font-size="14" font-weight="bold" fill="#28c840">STATUS: RESEARCHING</text>
+  <g>
+    <rect x="300" y="870" width="15" height="15" rx="2" fill="#00f0ff" filter="url(#fs)"><animate attributeName="opacity" from="0.15" to="1" dur="0.4s" begin="0.2s" fill="freeze"/></rect>
+    <rect x="321" y="870" width="15" height="15" rx="2" fill="#00f0ff" filter="url(#fs)"><animate attributeName="opacity" from="0.15" to="1" dur="0.4s" begin="0.5s" fill="freeze"/></rect>
+    <rect x="342" y="870" width="15" height="15" rx="2" fill="#a855f7" filter="url(#fs)"><animate attributeName="opacity" from="0.15" to="1" dur="0.4s" begin="0.8s" fill="freeze"/></rect>
+    <rect x="363" y="870" width="15" height="15" rx="2" fill="#ff00e5" filter="url(#fs)"><animate attributeName="opacity" from="0.15" to="1" dur="0.4s" begin="1.1s" fill="freeze"/></rect>
+    <rect x="384" y="870" width="15" height="15" rx="2" fill="#2a3550"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="1.5s" repeatCount="indefinite"/></rect>
+  </g>
+  <text x="966" y="883" text-anchor="end" font-size="14" font-weight="bold" fill="#ff4fd8" filter="url(#fs)">LOCATION: BEIJING ⇄ NANJING</text>
 </svg>'''
-    open("assets/activity.svg", "w", encoding="utf-8").write(svg)
+    open("assets/dashboard.svg", "w", encoding="utf-8").write(svg)
+    print("generated dashboard.svg")
 
 if __name__ == "__main__":
     main()
