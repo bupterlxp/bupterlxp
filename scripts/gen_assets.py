@@ -66,7 +66,7 @@ def main():
     <style>
       .bg{{fill:#07070d}}.grd{{stroke:#0f1d33}}.ln{{stroke:#1b2b45}}.lbl{{fill:#7fdfff}}.txt{{fill:#cfe3ff}}
       @media (prefers-color-scheme: light){{
-        .bg{{fill:#eef3fb}}.grd{{stroke:#c7d4ea}}.ln{{stroke:#9bb3d6}}.lbl{{fill:#2b5b8c}}.txt{{fill:#1f2d44}}
+        .bg{{fill:#f4f8fe}}.grd{{stroke:#dbe6f5}}.ln{{stroke:#b3c7e3}}.lbl{{fill:#2b4a73}}.txt{{fill:#1f2d44}}
       }}
     </style>
   </defs>
