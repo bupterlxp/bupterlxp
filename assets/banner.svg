@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" fill="none" font-family="'Courier New',monospace">
   <defs>
     <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
+    <linearGradient id="g1d" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0a8fb0"/><stop offset="0.5" stop-color="#7c3aed"/><stop offset="1" stop-color="#c026a8"/></linearGradient>
     <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff" stop-opacity="0"/><stop offset="0.5" stop-color="#00f0ff" stop-opacity="0.5"/><stop offset="1" stop-color="#00f0ff" stop-opacity="0"/></linearGradient>
     <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75"><stop offset="0.55" stop-color="#07070d" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.7"/></radialGradient>
     <radialGradient id="spot" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#1b2c52" stop-opacity="0.9"/><stop offset="1" stop-color="#07070d" stop-opacity="0"/></radialGradient>
@@ -8,11 +9,10 @@
     <filter id="fs" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path class="grd" d="M40 0 L0 0 0 40" fill="none" stroke="#10203a" stroke-width="1"/></pattern>
     <clipPath id="wipe"><rect x="360" y="120" width="0" height="190"><animate attributeName="width" from="0" to="840" dur="1.3s" begin="0.3s" fill="freeze"/></rect></clipPath>
-    <linearGradient id="g1d" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0a8fb0"/><stop offset="0.5" stop-color="#7c3aed"/><stop offset="1" stop-color="#c026a8"/></linearGradient>
     <style>
       .bg{fill:#07070d}.grd{stroke:#10203a}.vig{opacity:1}.sub{fill:#00f0ff}
       @media (prefers-color-scheme: light){
-        .bg{fill:#eef3fb}.grd{stroke:#c7d4ea}.vig{opacity:0}.sub{fill:#0b6e8c}.ttl{fill:url(#g1d)}
+        .bg{fill:#eaf1fb}.grd{stroke:#cfdcf0}.vig{opacity:0}.sub{fill:#0b6e8c}.ttl{fill:url(#g1d)}
       }
     </style>
   </defs>
@@ -20,12 +20,11 @@
   <rect class="bg" width="1200" height="380" fill="#07070d"/>
   <rect width="1200" height="380" fill="url(#grid)"/>
 
-  <!-- matrix rain (right side) -->
-  <g font-size="15" fill="#19c39a" opacity="0.15">
-    <text x="520" y="0">1<tspan x="520" dy="18">0</tspan><tspan x="520" dy="18">1</tspan><tspan x="520" dy="18">1</tspan><tspan x="520" dy="18">0</tspan><tspan x="520" dy="18">1</tspan><tspan x="520" dy="18">0</tspan><animateTransform attributeName="transform" type="translate" from="0 -160" to="0 400" dur="5.5s" repeatCount="indefinite"/></text>
-    <text x="720" y="0">0<tspan x="720" dy="18">1</tspan><tspan x="720" dy="18">0</tspan><tspan x="720" dy="18">1</tspan><tspan x="720" dy="18">1</tspan><tspan x="720" dy="18">0</tspan><animateTransform attributeName="transform" type="translate" from="0 -200" to="0 400" dur="6.8s" begin="1s" repeatCount="indefinite"/></text>
-    <text x="930" y="0">1<tspan x="930" dy="18">1</tspan><tspan x="930" dy="18">0</tspan><tspan x="930" dy="18">0</tspan><tspan x="930" dy="18">1</tspan><tspan x="930" dy="18">0</tspan><tspan x="930" dy="18">1</tspan><animateTransform attributeName="transform" type="translate" from="0 -180" to="0 400" dur="6s" begin="0.6s" repeatCount="indefinite"/></text>
-    <text x="1090" y="0">0<tspan x="1090" dy="18">0</tspan><tspan x="1090" dy="18">1</tspan><tspan x="1090" dy="18">0</tspan><tspan x="1090" dy="18">1</tspan><tspan x="1090" dy="18">1</tspan><animateTransform attributeName="transform" type="translate" from="0 -200" to="0 400" dur="7s" begin="1.8s" repeatCount="indefinite"/></text>
+  <!-- matrix rain -->
+  <g font-size="15" fill="#19c39a" opacity="0.12">
+    <text x="520" y="0">1<tspan x="520" dy="18">0</tspan><tspan x="520" dy="18">1</tspan><tspan x="520" dy="18">1</tspan><tspan x="520" dy="18">0</tspan><tspan x="520" dy="18">1</tspan><animateTransform attributeName="transform" type="translate" from="0 -160" to="0 400" dur="5.5s" repeatCount="indefinite"/></text>
+    <text x="720" y="0">0<tspan x="720" dy="18">1</tspan><tspan x="720" dy="18">0</tspan><tspan x="720" dy="18">1</tspan><tspan x="720" dy="18">1</tspan><animateTransform attributeName="transform" type="translate" from="0 -200" to="0 400" dur="6.8s" begin="1s" repeatCount="indefinite"/></text>
+    <text x="930" y="0">1<tspan x="930" dy="18">1</tspan><tspan x="930" dy="18">0</tspan><tspan x="930" dy="18">0</tspan><tspan x="930" dy="18">1</tspan><animateTransform attributeName="transform" type="translate" from="0 -180" to="0 400" dur="6s" begin="0.6s" repeatCount="indefinite"/></text>
   </g>
 
   <!-- scan band -->
@@ -35,28 +34,39 @@
   <rect x="0" y="0" width="1200" height="3" fill="url(#g1)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/></rect>
   <rect x="0" y="377" width="1200" height="3" fill="url(#g1)"><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></rect>
 
+  <!-- ⚑ flag bunting (waving) -->
+  <line x1="40" y1="9" x2="1010" y2="9" stroke="#3a4a66" stroke-width="1.5"/>
+  <g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-5 100 9;5 100 9;-5 100 9" dur="3s" begin="0s" repeatCount="indefinite"/><polygon points="78,9 122,9 100,40" fill="#ff4d4d"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="5 200 9;-5 200 9;5 200 9" dur="3.2s" begin="0.2s" repeatCount="indefinite"/><polygon points="178,9 222,9 200,40" fill="#ffd23f"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-5 300 9;5 300 9;-5 300 9" dur="3.1s" begin="0.4s" repeatCount="indefinite"/><polygon points="278,9 322,9 300,40" fill="#28c840"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="5 400 9;-5 400 9;5 400 9" dur="3.3s" begin="0.6s" repeatCount="indefinite"/><polygon points="378,9 422,9 400,40" fill="#00f0ff"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-5 500 9;5 500 9;-5 500 9" dur="3s" begin="0.8s" repeatCount="indefinite"/><polygon points="478,9 522,9 500,40" fill="#a855f7"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="5 600 9;-5 600 9;5 600 9" dur="3.2s" begin="1s" repeatCount="indefinite"/><polygon points="578,9 622,9 600,40" fill="#ff00e5"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-5 700 9;5 700 9;-5 700 9" dur="3.1s" begin="1.2s" repeatCount="indefinite"/><polygon points="678,9 722,9 700,40" fill="#ff4d4d"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="5 800 9;-5 800 9;5 800 9" dur="3.3s" begin="1.4s" repeatCount="indefinite"/><polygon points="778,9 822,9 800,40" fill="#ffd23f"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-5 900 9;5 900 9;-5 900 9" dur="3s" begin="1.6s" repeatCount="indefinite"/><polygon points="878,9 922,9 900,40" fill="#28c840"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="5 1000 9;-5 1000 9;5 1000 9" dur="3.2s" begin="1.8s" repeatCount="indefinite"/><polygon points="978,9 1022,9 1000,40" fill="#00f0ff"/></g>
+  </g>
+
   <!-- HUD corners -->
   <g stroke="#00f0ff" stroke-width="2.5" fill="none" filter="url(#fs)">
-    <path d="M24 66 L24 26 L66 26"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/></path>
-    <path d="M1176 66 L1176 26 L1134 26"><animate attributeName="opacity" values="1;0.5;1" dur="2.2s" repeatCount="indefinite"/></path>
     <path d="M24 314 L24 354 L66 354"><animate attributeName="opacity" values="1;0.5;1" dur="2.2s" repeatCount="indefinite"/></path>
     <path d="M1176 314 L1176 354 L1134 354"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/></path>
   </g>
 
   <!-- ============ LEFT: AVATAR ============ -->
-  <ellipse cx="195" cy="195" rx="160" ry="150" fill="url(#spot)"/>
-  <g transform="translate(15,-12) scale(0.86)">
-    <!-- rotating ring -->
+  <ellipse cx="195" cy="200" rx="160" ry="150" fill="url(#spot)"/>
+  <g transform="translate(15,-8) scale(0.84)">
     <circle cx="180" cy="208" r="140" fill="none" stroke="url(#g1)" stroke-width="2" stroke-dasharray="6 14" opacity="0.55"><animateTransform attributeName="transform" type="rotate" from="0 180 208" to="360 180 208" dur="20s" repeatCount="indefinite"/></circle>
     <circle cx="180" cy="208" r="140" fill="none" stroke="#00f0ff" stroke-width="1" stroke-dasharray="2 28" opacity="0.4"><animateTransform attributeName="transform" type="rotate" from="360 180 208" to="0 180 208" dur="26s" repeatCount="indefinite"/></circle>
-    <!-- holo tokens -->
     <g font-weight="bold" filter="url(#fs)">
-      <text x="40" y="96" font-size="20" fill="#00f0ff" opacity="0.85">&lt;/&gt;<animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.5s" repeatCount="indefinite"/></text>
-      <text x="284" y="120" font-size="20" fill="#ff00e5" opacity="0.85">{ }<animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0" dur="4.2s" repeatCount="indefinite"/></text>
-      <text x="298" y="252" font-size="16" fill="#a855f7" opacity="0.85">AI<animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="3.8s" repeatCount="indefinite"/></text>
-      <text x="40" y="252" font-size="22" fill="#a855f7" opacity="0.8">λ<animateTransform attributeName="transform" type="translate" values="0 0;0 6;0 0" dur="4.6s" repeatCount="indefinite"/></text>
+      <text x="40" y="100" font-size="20" fill="#00f0ff" opacity="0.85">&lt;/&gt;<animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.5s" repeatCount="indefinite"/></text>
+      <text x="288" y="124" font-size="20" fill="#ff00e5" opacity="0.85">{ }<animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0" dur="4.2s" repeatCount="indefinite"/></text>
+      <text x="300" y="256" font-size="16" fill="#a855f7" opacity="0.85">AI<animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="3.8s" repeatCount="indefinite"/></text>
+      <text x="40" y="256" font-size="22" fill="#a855f7" opacity="0.8">λ<animateTransform attributeName="transform" type="translate" values="0 0;0 6;0 0" dur="4.6s" repeatCount="indefinite"/></text>
     </g>
-    <!-- character (bob) -->
+    <!-- character -->
     <g>
       <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="4s" repeatCount="indefinite"/>
       <ellipse cx="180" cy="424" rx="92" ry="13" fill="#00f0ff" opacity="0.18" filter="url(#fg)"/>
@@ -70,15 +80,13 @@
       <polygon points="180,326 196,336 196,356 180,366 164,356 164,336" fill="#0b1530" stroke="url(#g1)" stroke-width="1.8" filter="url(#fs)"/>
       <text x="180" y="352" text-anchor="middle" font-size="12" font-weight="bold" fill="#00f0ff">AI</text>
       <rect x="166" y="196" width="28" height="26" rx="8" fill="#e7b48c"/>
-      <!-- big back hair + side locks -->
+      <!-- hair (full) -->
       <ellipse cx="180" cy="108" rx="74" ry="62" fill="#14142a"/>
       <path d="M116,116 C100,150 102,188 120,210 L142,200 C128,176 128,142 140,118 Z" fill="#14142a"/>
       <path d="M244,116 C260,150 258,188 240,210 L218,200 C232,176 232,142 220,118 Z" fill="#14142a"/>
-      <!-- face -->
       <ellipse cx="180" cy="152" rx="56" ry="58" fill="#f6cda8"/>
       <circle cx="126" cy="160" r="10" fill="#f0c098"/><circle cx="234" cy="160" r="10" fill="#f0c098"/>
       <circle cx="142" cy="176" r="11" fill="#ff8fb0" opacity="0.30"/><circle cx="218" cy="176" r="11" fill="#ff8fb0" opacity="0.30"/>
-      <!-- full layered fringe -->
       <path d="M112,154 Q110,94 180,88 Q250,94 248,154 Q244,118 218,108 Q230,144 208,154 Q206,112 182,106 Q193,146 168,154 Q166,110 146,112 Q149,144 134,154 Q127,120 112,154 Z" fill="#14142a"/>
       <path d="M150,110 Q136,134 128,156" fill="none" stroke="#00f0ff" stroke-width="1.6" opacity="0.75"/>
       <path d="M182,102 Q180,128 180,150" fill="none" stroke="#a855f7" stroke-width="1.5" opacity="0.65"/>
@@ -86,26 +94,27 @@
       <path d="M138,140 Q150,135 162,139" stroke="#23233b" stroke-width="3" fill="none" stroke-linecap="round"/>
       <path d="M198,139 Q210,135 222,140" stroke="#23233b" stroke-width="3" fill="none" stroke-linecap="round"/>
       <g>
-        <ellipse cx="150" cy="158" rx="10" ry="8" fill="#ffffff"/>
-        <ellipse cx="210" cy="158" rx="10" ry="8" fill="#ffffff"/>
+        <ellipse cx="150" cy="158" rx="10" ry="8" fill="#ffffff"/><ellipse cx="210" cy="158" rx="10" ry="8" fill="#ffffff"/>
         <circle cx="152" cy="159" r="4.5" fill="#1a1a2e"/><circle cx="212" cy="159" r="4.5" fill="#1a1a2e"/>
         <circle cx="153.5" cy="157" r="1.6" fill="#fff"/><circle cx="213.5" cy="157" r="1.6" fill="#fff"/>
         <ellipse cx="150" cy="158" rx="11" ry="0" fill="#f6cda8"><animate attributeName="ry" values="0;0;9;0;0" keyTimes="0;0.92;0.95;0.98;1" dur="4.5s" repeatCount="indefinite"/></ellipse>
         <ellipse cx="210" cy="158" rx="11" ry="0" fill="#f6cda8"><animate attributeName="ry" values="0;0;9;0;0" keyTimes="0;0.92;0.95;0.98;1" dur="4.5s" repeatCount="indefinite"/></ellipse>
       </g>
-      <g stroke="#00f0ff" stroke-width="2.6" fill="#0a1828" fill-opacity="0.18" filter="url(#fs)">
-        <rect x="130" y="144" width="42" height="30" rx="9"/>
-        <rect x="188" y="144" width="42" height="30" rx="9"/>
-      </g>
+      <g stroke="#00f0ff" stroke-width="2.6" fill="#0a1828" fill-opacity="0.18" filter="url(#fs)"><rect x="130" y="144" width="42" height="30" rx="9"/><rect x="188" y="144" width="42" height="30" rx="9"/></g>
       <line x1="172" y1="153" x2="188" y2="153" stroke="#00f0ff" stroke-width="2.6"/>
       <line x1="130" y1="150" x2="118" y2="156" stroke="#00f0ff" stroke-width="2.6"/>
       <line x1="230" y1="150" x2="242" y2="156" stroke="#00f0ff" stroke-width="2.6"/>
       <path d="M180,166 l-3,11 q3,3 6,0" fill="none" stroke="#d9a47e" stroke-width="2" stroke-linecap="round"/>
       <path d="M166,186 Q180,197 194,186" fill="none" stroke="#b5654a" stroke-width="3" stroke-linecap="round"/>
-      <path d="M110,156 C110,72 250,72 250,156" fill="none" stroke="#23233b" stroke-width="10" stroke-linecap="round"/>
-      <path d="M110,156 C110,72 250,72 250,156" fill="none" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+      <path d="M110,156 C110,80 250,80 250,156" fill="none" stroke="#23233b" stroke-width="10" stroke-linecap="round"/>
       <rect x="102" y="146" width="26" height="42" rx="11" fill="#23233b" stroke="#ff00e5" stroke-width="2"/>
       <rect x="232" y="146" width="26" height="42" rx="11" fill="#23233b" stroke="#00f0ff" stroke-width="2"/>
+      <!-- 🎓 graduation cap (PhD) -->
+      <polygon points="180,50 244,78 180,106 116,78" fill="#15152a" stroke="url(#g1)" stroke-width="2"/>
+      <polygon points="180,64 244,78 180,92 116,78" fill="#1f1f3d"/>
+      <circle cx="180" cy="78" r="4" fill="#ffd23f"/>
+      <path d="M180,78 L216,86 L216,116" fill="none" stroke="#ffd23f" stroke-width="2.2"><animate attributeName="d" values="M180,78 L216,86 L216,116;M180,78 L216,86 L210,118;M180,78 L216,86 L216,116" dur="3s" repeatCount="indefinite"/></path>
+      <rect x="211" y="114" width="10" height="13" rx="2" fill="#ffd23f"><animate attributeName="x" values="211;205;211" dur="3s" repeatCount="indefinite"/></rect>
     </g>
   </g>
 
@@ -120,20 +129,28 @@
   <text x="760" y="276" text-anchor="middle" font-size="14" fill="#ff4fd8" letter-spacing="3" opacity="0">Multi-Agent · Agentic Coding · Reasoning · Idea Generation<animate attributeName="opacity" from="0" to="0.85" dur="0.6s" begin="2.1s" fill="freeze"/></text>
   <text x="760" y="312" text-anchor="middle" font-size="14" font-weight="bold" fill="#28c840" filter="url(#fs)" opacity="0">🎓 Incoming PhD · NJU × ZGC Academy · 2026.09<animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="2.5s" fill="freeze"/></text>
 
-  <rect class="vig" width="1200" height="380" fill="url(#vig)"/>
-
-  <!-- ⚽ World Cup 2026 seasonal skin -->
+  <!-- ⚽ spinning ball + score easter egg -->
   <g filter="url(#fs)">
-    <g transform="translate(1110,70)">
-      <circle r="16" fill="#ffffff" stroke="#0a0a12" stroke-width="1.5"/>
+    <g transform="translate(1110,66)">
+      <circle r="15" fill="#ffffff" stroke="#0a0a12" stroke-width="1.5"/>
       <polygon points="0,-7 7,-2 4,7 -4,7 -7,-2" fill="#0a0a12"/>
-      <line x1="0" y1="-7" x2="0" y2="-16" stroke="#0a0a12" stroke-width="1.2"/>
-      <line x1="7" y1="-2" x2="15" y2="-7" stroke="#0a0a12" stroke-width="1.2"/>
-      <line x1="4" y1="7" x2="9" y2="14" stroke="#0a0a12" stroke-width="1.2"/>
-      <line x1="-4" y1="7" x2="-9" y2="14" stroke="#0a0a12" stroke-width="1.2"/>
-      <line x1="-7" y1="-2" x2="-15" y2="-7" stroke="#0a0a12" stroke-width="1.2"/>
+      <line x1="0" y1="-7" x2="0" y2="-15" stroke="#0a0a12" stroke-width="1.2"/><line x1="7" y1="-2" x2="14" y2="-7" stroke="#0a0a12" stroke-width="1.2"/><line x1="4" y1="7" x2="9" y2="13" stroke="#0a0a12" stroke-width="1.2"/><line x1="-4" y1="7" x2="-9" y2="13" stroke="#0a0a12" stroke-width="1.2"/><line x1="-7" y1="-2" x2="-14" y2="-7" stroke="#0a0a12" stroke-width="1.2"/>
       <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite" additive="sum"/>
     </g>
-    <text x="1110" y="104" text-anchor="middle" font-size="11" font-weight="bold" fill="#28c840">WORLD CUP 2026</text>
+    <text x="1110" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#28c840">AGENTS 3 - 0 BUGS</text>
   </g>
+
+  <!-- 🥅 goal + shot animation -->
+  <g stroke-linecap="round">
+    <g stroke="#dfe9ff" stroke-width="2.4" fill="none"><path d="M40 372 L40 340 L108 340 L108 372"/></g>
+    <g stroke="#3a557e" stroke-width="0.8" opacity="0.8"><line x1="40" y1="349" x2="108" y2="349"/><line x1="40" y1="358" x2="108" y2="358"/><line x1="40" y1="367" x2="108" y2="367"/><line x1="52" y1="340" x2="52" y2="372"/><line x1="64" y1="340" x2="64" y2="372"/><line x1="76" y1="340" x2="76" y2="372"/><line x1="88" y1="340" x2="88" y2="372"/><line x1="96" y1="340" x2="96" y2="372"/></g>
+    <circle r="5" fill="#ffffff" stroke="#0a0a12" stroke-width="1">
+      <animate attributeName="cx" values="220;74;74;220;220" keyTimes="0;0.4;0.9;0.92;1" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="368;356;356;368;368" keyTimes="0;0.4;0.9;0.92;1" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;1;0;1" keyTimes="0;0.4;0.9;0.92;1" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="74" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#28c840" opacity="0">GOAL!<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4;0.42;0.86;0.9;1" dur="3.4s" repeatCount="indefinite"/></text>
+  </g>
+
+  <rect class="vig" width="1200" height="380" fill="url(#vig)"/>
 </svg>
