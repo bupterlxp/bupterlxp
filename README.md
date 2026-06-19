@@ -1,11 +1,7 @@
 <!-- ============ ⚡ CYBER-NEON PROFILE · 全自托管 SVG · 国内零碎图 ============ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/banner.svg" alt="Xinping Lei — LLM / Agent Researcher" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/avatar.svg" alt="Cyber avatar of Xinping Lei" width="270" />
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/banner.svg" alt="Xinping Lei — LLM / Agent Researcher (with avatar)" width="100%" />
 </p>
 
 <p align="center">
