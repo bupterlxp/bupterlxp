@@ -20,10 +20,6 @@
   <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/dashboard.svg" alt="Control Deck" width="94%" />
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/quotes.svg" alt="rotating quotes" width="88%" />
-</p>
-
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
 ## 🌌 论文星图
