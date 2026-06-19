@@ -100,9 +100,3 @@ class XinpingLei:
 <p align="center">
   <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg" alt="snake" width="100%" />
 </p>
-
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
-
-<p align="center">
-  <sub>⚡ 全站头图 / 终端 / 战绩卡 / 分割线均为手写自托管 SVG，国内访问不碎图 · Crafted with neon & care</sub>
-</p>
