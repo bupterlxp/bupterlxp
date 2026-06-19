@@ -8,7 +8,7 @@ import os, json, urllib.request
 PUBLICATIONS, CITATIONS, HINDEX = 11, 23, 4
 # —— 手动维护：入学/履历喜讯 ——
 INCOMING_WHEN = "2026.09"
-INCOMING_TEXT = "南京大学 × 北京中关村学院 · 联合培养项目"
+INCOMING_TEXT = "南京大学 × 北京中关村学院 · 联合培养博士"
 
 USER  = os.environ.get("GH_USER", "bupterlxp")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
