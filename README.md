@@ -5,14 +5,18 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=00F0FF&center=true&vCenter=true&width=680&lines=Building+LLM+Agents+that+actually+work;Multi-Agent+Systems+%26+Agentic+Coding;Reasoning%2C+Alignment+%26+Idea+Generation;Turning+research+into+real+tools+%E2%9A%A1" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=2600&pause=800&color=00F0FF&center=true&vCenter=true&width=720&lines=%24+whoami+-%3E+Xinping+Lei+%40+BUPT;compiling+ideas...+spawning+agents...;while+not+done%3A+research()+%E2%9A%A1;git+commit+-m+'one+more+paper';Building+LLM+Agents+that+actually+work" alt="Typing SVG" />
 </p>
 
 <p align="center">
   <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://img.shields.io/badge/Google_Scholar-00F0FF?style=for-the-badge&logo=googlescholar&logoColor=black" /></a>
-  <img src="https://img.shields.io/badge/BUPT-A855F7?style=for-the-badge&logo=academia&logoColor=white" />
-  <img src="https://img.shields.io/badge/LLM_·_Agent-FF00E5?style=for-the-badge&logo=openai&logoColor=white" />
+  <a href="https://github.com/bupterlxp"><img src="https://img.shields.io/badge/GitHub-A855F7?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://arxiv.org/a/lei_x_1"><img src="https://img.shields.io/badge/arXiv-FF00E5?style=for-the-badge&logo=arxiv&logoColor=white" /></a>
   <img src="https://komarev.com/ghpvc/?username=bupterlxp&color=00f0ff&style=for-the-badge&label=VIEWS" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/statusbar.svg" width="92%" />
 </p>
 
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
@@ -47,6 +51,22 @@ class XinpingLei:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/stats.svg" alt="stats" width="88%" />
+</p>
+
+## 📡 最近动态
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/activity.svg" alt="latest activity" width="88%" />
+</p>
+
+> 🔄 战绩面板与最近动态由 GitHub Action 每日自动刷新（自托管 SVG，国内不碎图）
+
+<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+
+## 🎯 技能雷达
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/radar.svg" alt="skill radar" width="44%" />
 </p>
 
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
@@ -99,4 +119,8 @@ class XinpingLei:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg" alt="snake" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/statusbar.svg" width="92%" />
 </p>
