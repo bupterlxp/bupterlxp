@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" width="1000" height="230" fill="none" font-family="'Courier New',monospace">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.4" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
+    <filter id="fg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="fs" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path class="grd" d="M34 0 L0 0 0 34" fill="none" stroke="#0f1d33" stroke-width="1"/></pattern>
+    <style>.bg{fill:#07070d}.grd{stroke:#0f1d33}.lbl{fill:#cfe3ff}.sub{fill:#7fdfff}
+      @media (prefers-color-scheme: light){.bg{fill:#f4f8fe}.grd{stroke:#dbe6f5}.lbl{fill:#2b4a73}.sub{fill:#1f6f9c}}</style>
+  </defs>
+  <rect class="bg" x="3" y="3" width="994" height="224" rx="16" fill="#07070d" stroke="url(#g1)" stroke-width="2"/>
+  <rect x="3" y="3" width="994" height="224" rx="16" fill="url(#grid)" opacity="0.5"/>
+  <text x="30" y="44" font-size="18" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="2">// ACADEMIC JOURNEY · 学术旅程</text>
+
+  <!-- main line draw-on -->
+  <line x1="110" y1="125" x2="890" y2="125" stroke="url(#g1)" stroke-width="3" filter="url(#fs)" stroke-dasharray="800" stroke-dashoffset="800"><animate attributeName="stroke-dashoffset" from="800" to="0" dur="1.6s" fill="freeze"/></line>
+
+  <!-- milestones -->
+  <g font-weight="bold">
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.4s" fill="freeze"/>
+      <circle cx="140" cy="125" r="9" fill="#00f0ff" filter="url(#fg)"><animate attributeName="r" values="7;10;7" dur="2s" repeatCount="indefinite"/></circle>
+      <text class="sub" x="140" y="96" text-anchor="middle" font-size="15" fill="#7fdfff">2023</text>
+      <text class="lbl" x="140" y="160" text-anchor="middle" font-size="13" fill="#cfe3ff">BUPT 入学</text></g>
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.8s" fill="freeze"/>
+      <circle cx="390" cy="125" r="9" fill="#a855f7" filter="url(#fg)"><animate attributeName="r" values="7;10;7" dur="2s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <text class="sub" x="390" y="96" text-anchor="middle" font-size="15" fill="#7fdfff">2025</text>
+      <text class="lbl" x="390" y="160" text-anchor="middle" font-size="13" fill="#cfe3ff">首批论文 · EMNLP</text></g>
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze"/>
+      <circle cx="640" cy="125" r="9" fill="#ff00e5" filter="url(#fg)"><animate attributeName="r" values="7;10;7" dur="2s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <text class="sub" x="640" y="96" text-anchor="middle" font-size="15" fill="#7fdfff">2026.06</text>
+      <text class="lbl" x="640" y="160" text-anchor="middle" font-size="13" fill="#cfe3ff">PhD Offer 🎓</text></g>
+    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.6s" fill="freeze"/>
+      <circle cx="860" cy="125" r="11" fill="none" stroke="#28c840" stroke-width="2.5"><animate attributeName="r" values="9;13;9" dur="1.6s" repeatCount="indefinite"/></circle>
+      <circle cx="860" cy="125" r="5" fill="#28c840"/>
+      <text class="sub" x="860" y="96" text-anchor="middle" font-size="15" fill="#7fdfff">2026.09</text>
+      <text class="lbl" x="860" y="160" text-anchor="middle" font-size="13" fill="#cfe3ff">NJU × ZGC 联培博士</text></g>
+  </g>
+  <text x="500" y="205" text-anchor="middle" font-size="12" fill="#a855f7">▶ BUPT → Researcher → Joint PhD @ NJU × ZGC Academy</text>
+</svg>
