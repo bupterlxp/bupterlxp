@@ -2,7 +2,7 @@
 """自托管主页资源生成器：抓取真实 GitHub 数据，渲染单张合并大图 dashboard.svg
 （whoami 终端 + 技能雷达 + 战绩 + 最近动态 + 入学喜讯 + 状态栏）。
 零第三方依赖。由 .github/workflows/profile-refresh.yml 定时调用，也可本地运行。"""
-import os, json, urllib.request
+import os, json, urllib.request, datetime
 
 # —— 手动维护：学术指标（来自 Google Scholar）——
 PUBLICATIONS, CITATIONS, HINDEX = 11, 23, 4
@@ -27,6 +27,19 @@ def esc(s):
 def bar(value, ref, cap=250):
     return max(25, min(cap, round(value / ref * cap)))
 
+def season_skin():
+    """按日期自动切换的节日皮肤；返回标题栏徽章文字（空串=无）。"""
+    t = datetime.date.today()
+    if t.year == 2026 and ((t.month == 6 and t.day >= 11) or (t.month == 7 and t.day <= 19)):
+        return "⚽ FIFA WORLD CUP 2026"
+    if (t.month == 1 and t.day >= 20) or (t.month == 2 and t.day <= 20):
+        return "🏮 新春快乐"
+    if t.month == 10 and t.day <= 7:
+        return "🇨🇳 国庆快乐"
+    if (t.month == 12 and t.day >= 20) or (t.month == 1 and t.day <= 2):
+        return "🎄 Happy New Year"
+    return ""
+
 def main():
     user  = api(f"/users/{USER}")
     repos = api(f"/users/{USER}/repos?per_page=100&sort=pushed")
@@ -41,31 +54,40 @@ def main():
     bp, bc, br, bs = bar(PUBLICATIONS,15), bar(CITATIONS,30), bar(public,15), bar(max(stars,1),10)
 
     os.makedirs("assets", exist_ok=True)
+    season = season_skin()
+    season_el = (f'<text x="560" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#28c840" filter="url(#fs)">{season}</text>') if season else ""
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="1000" height="900" fill="none" font-family="'Courier New',monospace">
   <defs>
     <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
     <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff" stop-opacity="0"/><stop offset="0.5" stop-color="#00f0ff" stop-opacity="0.4"/><stop offset="1" stop-color="#00f0ff" stop-opacity="0"/></linearGradient>
     <filter id="fg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <filter id="fs" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 L0 0 0 34" fill="none" stroke="#0f1d33" stroke-width="1"/></pattern>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path class="grd" d="M34 0 L0 0 0 34" fill="none" stroke="#0f1d33" stroke-width="1"/></pattern>
+    <style>
+      .bg{{fill:#07070d}}.grd{{stroke:#0f1d33}}.ln{{stroke:#1b2b45}}.lbl{{fill:#7fdfff}}.txt{{fill:#cfe3ff}}
+      @media (prefers-color-scheme: light){{
+        .bg{{fill:#eef3fb}}.grd{{stroke:#c7d4ea}}.ln{{stroke:#9bb3d6}}.lbl{{fill:#2b5b8c}}.txt{{fill:#1f2d44}}
+      }}
+    </style>
   </defs>
 
   <!-- frame -->
-  <rect x="3" y="3" width="994" height="894" rx="18" fill="#07070d" stroke="url(#g1)" stroke-width="2"><animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/></rect>
+  <rect class="bg" x="3" y="3" width="994" height="894" rx="18" fill="#07070d" stroke="url(#g1)" stroke-width="2"><animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/></rect>
   <rect x="3" y="3" width="994" height="894" rx="18" fill="url(#grid)" opacity="0.5"/>
   <rect x="-300" y="0" width="300" height="900" fill="url(#scan)" opacity="0.10"><animate attributeName="x" values="-300;1000" dur="7s" repeatCount="indefinite"/></rect>
 
   <!-- title bar -->
   <text x="30" y="40" font-size="22" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="2">// XINPING LEI — CONTROL DECK</text>
   <text x="970" y="40" text-anchor="end" font-size="14" font-weight="bold" fill="#28c840">● ONLINE<animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></text>
-  <line x1="20" y1="56" x2="980" y2="56" stroke="#1b2b45"/>
-  <line x1="552" y1="56" x2="552" y2="420" stroke="#1b2b45"/>
+  {season_el}
+  <line x1="20" y1="56" x2="980" y2="56" class="ln" stroke="#1b2b45"/>
+  <line x1="552" y1="56" x2="552" y2="420" class="ln" stroke="#1b2b45"/>
 
   <!-- ===== WHOAMI ===== -->
   <text x="30" y="88" font-size="15" font-weight="bold" fill="#7fdfff" letter-spacing="2">// WHOAMI</text>
   <g font-size="15" filter="url(#fs)">
     <text x="30" y="120" fill="#28c840">$ whoami<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.2s" fill="freeze"/></text>
-    <text x="30" y="146" fill="#cfe3ff">→ <tspan fill="#00f0ff" font-weight="bold">Xinping Lei</tspan> · LLM/Agent Researcher @ BUPT<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/></text>
+    <text x="30" y="146" class="txt" fill="#cfe3ff">→ <tspan fill="#00f0ff" font-weight="bold">Xinping Lei</tspan> · LLM/Agent Researcher @ BUPT<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/></text>
     <text x="30" y="180" fill="#28c840">$ cat research_focus.txt<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/></text>
     <text x="30" y="206" fill="#a855f7">→ Multi-Agent · Agentic Orchestration<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.4s" fill="freeze"/></text>
     <text x="30" y="230" fill="#a855f7">→ Agentic Coding &amp; Evaluation<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.7s" fill="freeze"/></text>
@@ -78,7 +100,7 @@ def main():
   <!-- ===== SKILL RADAR (embedded, scaled) ===== -->
   <g transform="translate(566,60) scale(0.88)">
     <text x="220" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="3">// SKILL RADAR</text>
-    <g stroke="#1b2b45" stroke-width="1" fill="none">
+    <g class="ln" stroke="#1b2b45" stroke-width="1" fill="none">
       <polygon points="220,65 336.9,132.5 336.9,267.5 220,335 103.1,267.5 103.1,132.5"/>
       <polygon points="220,110.9 297.2,155.4 297.2,244.6 220,289.1 142.8,244.6 142.8,155.4"/>
       <polygon points="220,155.45 258.6,177.7 258.6,222.3 220,244.55 181.4,222.3 181.4,177.7"/>
@@ -99,7 +121,7 @@ def main():
       <circle cx="114.8" cy="260.75" r="3.5" fill="#a855f7"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1.2s" repeatCount="indefinite"/></circle>
       <circle cx="128.8" cy="147.35" r="3.5" fill="#ff00e5"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1.5s" repeatCount="indefinite"/></circle>
     </g>
-    <g font-size="14" font-weight="bold" fill="#cfe3ff">
+    <g font-size="14" font-weight="bold" class="txt" fill="#cfe3ff">
       <text x="220" y="55" text-anchor="middle">LLM</text>
       <text x="348" y="132">Agent</text>
       <text x="348" y="272">Agentic Coding</text>
@@ -110,45 +132,45 @@ def main():
   </g>
 
   <!-- ===== STATS ===== -->
-  <line x1="20" y1="420" x2="980" y2="420" stroke="#1b2b45"/>
+  <line x1="20" y1="420" x2="980" y2="420" class="ln" stroke="#1b2b45"/>
   <text x="30" y="452" font-size="18" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="2">// RESEARCH × CODE — STATS</text>
   <g font-weight="bold">
-    <text x="40" y="492" font-size="13" fill="#7fdfff" letter-spacing="1">PUBLICATIONS</text>
+    <text x="40" y="492" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">PUBLICATIONS</text>
     <text x="40" y="528" font-size="34" fill="#00f0ff" filter="url(#fg)">{PUBLICATIONS}</text>
     <rect x="40" y="540" height="6" rx="3" fill="#16263f"/><rect x="40" y="540" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="{bp}" dur="1.3s" begin="0.4s" fill="freeze"/></rect>
-    <text x="350" y="492" font-size="13" fill="#7fdfff" letter-spacing="1">CITATIONS</text>
+    <text x="350" y="492" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">CITATIONS</text>
     <text x="350" y="528" font-size="34" fill="#a855f7" filter="url(#fg)">{CITATIONS}</text>
     <rect x="350" y="540" height="6" rx="3" fill="#16263f"/><rect x="350" y="540" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="{bc}" dur="1.3s" begin="0.6s" fill="freeze"/></rect>
-    <text x="660" y="492" font-size="13" fill="#7fdfff" letter-spacing="1">h-INDEX</text>
+    <text x="660" y="492" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">h-INDEX</text>
     <text x="660" y="528" font-size="34" fill="#ff00e5" filter="url(#fg)">{HINDEX}</text>
-    <text x="40" y="576" font-size="13" fill="#7fdfff" letter-spacing="1">PUBLIC REPOS</text>
+    <text x="40" y="576" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">PUBLIC REPOS</text>
     <text x="40" y="612" font-size="34" fill="#00f0ff" filter="url(#fg)">{public}</text>
     <rect x="40" y="624" height="6" rx="3" fill="#16263f"/><rect x="40" y="624" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="{br}" dur="1.3s" begin="0.8s" fill="freeze"/></rect>
-    <text x="350" y="576" font-size="13" fill="#7fdfff" letter-spacing="1">TOTAL STARS</text>
+    <text x="350" y="576" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">TOTAL STARS</text>
     <text x="350" y="612" font-size="34" fill="#a855f7" filter="url(#fg)">{stars}</text>
     <rect x="350" y="624" height="6" rx="3" fill="#16263f"/><rect x="350" y="624" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="{bs}" dur="1.3s" begin="1s" fill="freeze"/></rect>
-    <text x="660" y="576" font-size="13" fill="#7fdfff" letter-spacing="1">FOLLOWERS · SINCE</text>
+    <text x="660" y="576" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">FOLLOWERS · SINCE</text>
     <text x="660" y="612" font-size="34" fill="#ff00e5" filter="url(#fg)">{followers} · {since}</text>
   </g>
 
   <!-- ===== LATEST SIGNAL ===== -->
-  <line x1="20" y1="652" x2="980" y2="652" stroke="#1b2b45"/>
+  <line x1="20" y1="652" x2="980" y2="652" class="ln" stroke="#1b2b45"/>
   <circle cx="34" cy="684" r="6" fill="#28c840" filter="url(#fs)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
   <text x="52" y="689" font-size="15" font-weight="bold" fill="#00f0ff" letter-spacing="2">// LATEST SIGNAL · 最近动态</text>
   <text x="34" y="726" font-size="26" font-weight="bold" fill="url(#g1)" filter="url(#fg)">{name}</text>
-  <text x="34" y="752" font-size="14" fill="#cfe3ff">{desc}</text>
+  <text x="34" y="752" font-size="14" class="txt" fill="#cfe3ff">{desc}</text>
   <text x="966" y="722" text-anchor="end" font-size="14" font-weight="bold" fill="#a855f7">◈ {lang}</text>
   <text x="966" y="748" text-anchor="end" font-size="13" fill="#ff4fd8">⟳ {when}</text>
 
   <!-- ===== INCOMING (入学喜讯) ===== -->
-  <line x1="20" y1="772" x2="980" y2="772" stroke="#1b2b45"/>
+  <line x1="20" y1="772" x2="980" y2="772" class="ln" stroke="#1b2b45"/>
   <rect x="22" y="782" width="956" height="58" rx="10" fill="#a855f7" fill-opacity="0.08" stroke="url(#g1)" stroke-width="1.4"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/></rect>
   <text x="42" y="808" font-size="14" font-weight="bold" fill="#28c840">▶ INCOMING · {INCOMING_WHEN}</text>
   <text x="42" y="830" font-size="17" font-weight="bold" fill="url(#g1)" filter="url(#fs)">🎓 {INCOMING_TEXT}</text>
-  <text x="966" y="820" text-anchor="end" font-size="13" font-weight="bold" fill="#7fdfff">Joint PhD Program · NJU × ZGC Academy</text>
+  <text class="lbl" x="966" y="820" text-anchor="end" font-size="13" font-weight="bold" fill="#7fdfff">Joint PhD Program · NJU × ZGC Academy</text>
 
   <!-- ===== STATUS BAR ===== -->
-  <line x1="20" y1="852" x2="980" y2="852" stroke="#1b2b45"/>
+  <line x1="20" y1="852" x2="980" y2="852" class="ln" stroke="#1b2b45"/>
   <circle cx="34" cy="878" r="6" fill="#28c840" filter="url(#fs)"><animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
   <text x="50" y="883" font-size="14" font-weight="bold" fill="#28c840">STATUS: RESEARCHING</text>
   <g>
