@@ -18,7 +18,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/dashboard.svg
+          git add assets/dashboard.svg assets/arxiv.svg
           if git diff --staged --quiet; then
             echo "no changes"; exit 0
           fi
