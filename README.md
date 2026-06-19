@@ -105,20 +105,6 @@
 
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
 
-## 🧑‍💻 ASCII 自画像
-
-```
-        ______________
-       /             /|        🎓 PhD-bound 2026.09
-      /   X. LEI    / |
-     /____________ /  |        LLM · Agent Researcher @ BUPT
-     |  ___   ___ |   |        ─────────────────────────────
-     | |o.o| |o.o||   /        > Multi-Agent · Agentic Coding
-     |  \_/   \_/ |  /         > Reasoning · Alignment
-     |    ___     | /          > Idea Generation
-     |___/   \___|/            $ ./build --agents  ⚡
-```
-
 ## 🧠 大脑进程监视器
 
 <p align="center">
