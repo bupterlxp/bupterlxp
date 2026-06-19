@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 150" width="1000" height="150" fill="none">
+  <defs>
+    <linearGradient id="ann" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f0ff"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff00e5"/></linearGradient>
+    <filter id="ag" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="agrid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0 L0 0 0 30" fill="none" stroke="#10203a" stroke-width="1"/></pattern>
+  </defs>
+  <rect x="3" y="3" width="994" height="144" rx="14" fill="#07070d" stroke="url(#ann)" stroke-width="2"/>
+  <rect x="3" y="3" width="994" height="144" rx="14" fill="url(#agrid)" opacity="0.5"/>
+  <circle cx="34" cy="38" r="6" fill="#28c840" filter="url(#ag)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+  <text x="52" y="43" font-family="'Courier New',monospace" font-size="16" font-weight="bold" fill="#00f0ff" letter-spacing="2">// LATEST SIGNAL · 最近动态</text>
+  <text x="34" y="88" font-family="'Courier New',monospace" font-size="30" font-weight="bold" fill="url(#ann)" filter="url(#ag)">work-planner</text>
+  <text x="34" y="118" font-family="'Courier New',monospace" font-size="15" fill="#cfe3ff">工作规划 · 看板/列表/本周/能力 + AI 总结的纯静态 PWA</text>
+  <text x="966" y="88" text-anchor="end" font-family="'Courier New',monospace" font-size="14" font-weight="bold" fill="#a855f7">◈ JavaScript</text>
+  <text x="966" y="118" text-anchor="end" font-family="'Courier New',monospace" font-size="13" fill="#ff4fd8">⟳ 2026-06-19</text>
+</svg>
