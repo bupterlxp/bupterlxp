@@ -15,58 +15,9 @@
   <img src="https://komarev.com/ghpvc/?username=bupterlxp&color=00f0ff&style=for-the-badge&label=VIEWS" />
 </p>
 
+<!-- 统一控制台：whoami / 技能雷达 / 战绩 / 最近动态 / 入学喜讯 / 状态栏（数据每日自动刷新） -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/statusbar.svg" width="92%" />
-</p>
-
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
-
-## 🖥️ whoami
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/terminal.svg" alt="terminal" width="78%" />
-</p>
-
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
-
-## 🧠 关于我
-
-```python
-class XinpingLei:
-    def __init__(self):
-        self.affiliation = "北京邮电大学 · BUPT"
-        self.role        = "LLM / Agent Researcher"
-        self.focus       = ["LLM", "Agent", "Idea Generation"]
-        self.keywords    = ["Multi-Agent", "Agentic Coding",
-                            "Reasoning & Alignment", "AIGC Orchestration"]
-        self.motto       = "让模型不只是会聊天，而是会干活 ⚡"
-
-    def now(self):
-        return "building agents that actually work"
-```
-
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
-
-## 📊 战绩面板
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/stats.svg" alt="stats" width="88%" />
-</p>
-
-## 📡 最近动态
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/activity.svg" alt="latest activity" width="88%" />
-</p>
-
-> 🔄 战绩面板与最近动态由 GitHub Action 每日自动刷新（自托管 SVG，国内不碎图）
-
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
-
-## 🎯 技能雷达
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/radar.svg" alt="skill radar" width="44%" />
+  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/dashboard.svg" alt="Control Deck" width="94%" />
 </p>
 
 <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
@@ -119,8 +70,4 @@ class XinpingLei:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg" alt="snake" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/statusbar.svg" width="92%" />
 </p>
