@@ -5,6 +5,11 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=600&lines=Building+LLM+Agents;Prompt+Engineering+%26+RAG;Multi-Agent+Orchestration;Always+learning+%F0%9F%9A%80" alt="Typing SVG" />
 </p>
 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=bupterlxp&color=7AA2F7&style=flat-square&label=Profile+Views" />
+  <img src="https://img.shields.io/github/followers/bupterlxp?label=Followers&style=flat-square&color=7AA2F7&logo=github" />
+</p>
+
 ---
 
 ### 🧠 关于我
@@ -17,33 +22,15 @@
 
 ### 🛠️ 技术栈
 
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![LangChain](https://img.shields.io/badge/-LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![OpenAI](https://img.shields.io/badge/-LLM/GPT-412991?style=flat-square&logo=openai&logoColor=white)
-![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
-
 <p>
-  <img src="https://skillicons.dev/icons?i=python,pytorch,fastapi,docker,git,linux,vscode,github&theme=dark" />
-</p>
-
----
-
-### 📊 GitHub 数据
-
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=bupterlxp&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bupterlxp&layout=compact&theme=tokyonight" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=bupterlxp&theme=tokyonight" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=bupterlxp&theme=tokyonight&no-frame=true&row=1&column=7" />
+  <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/-LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+  <img src="https://img.shields.io/badge/-LLM/GPT-412991?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
 </p>
 
 ---
@@ -51,9 +38,3 @@
 ### 🐍 贡献动画
 
 ![Snake animation](https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg)
-
----
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=bupterlxp&color=7AA2F7&style=flat-square&label=Profile+Views" />
-</p>
