@@ -21,7 +21,7 @@
   <!-- title bar -->
   <text x="30" y="40" font-size="22" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="2">// XINPING LEI — CONTROL DECK</text>
   <text x="970" y="40" text-anchor="end" font-size="14" font-weight="bold" fill="#28c840">● ONLINE<animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></text>
-  <text x="560" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#28c840" filter="url(#fs)">⚽ WORLD CUP 2026 · FINAL T-28d</text>
+  <text x="560" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#28c840" filter="url(#fs)">⚽ WORLD CUP 2026 · FINAL T-27d</text>
   <line x1="20" y1="56" x2="980" y2="56" class="ln" stroke="#1b2b45"/>
   <line x1="552" y1="56" x2="552" y2="420" class="ln" stroke="#1b2b45"/>
 
@@ -86,8 +86,8 @@
     <text x="660" y="492" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">h-INDEX</text>
     <text x="660" y="528" font-size="34" fill="#ff00e5" filter="url(#fg)">4</text>
     <text x="40" y="576" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">PUBLIC REPOS</text>
-    <text x="40" y="612" font-size="34" fill="#00f0ff" filter="url(#fg)">11</text>
-    <rect x="40" y="624" height="6" rx="3" fill="#16263f"/><rect x="40" y="624" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="183" dur="1.3s" begin="0.8s" fill="freeze"/></rect>
+    <text x="40" y="612" font-size="34" fill="#00f0ff" filter="url(#fg)">12</text>
+    <rect x="40" y="624" height="6" rx="3" fill="#16263f"/><rect x="40" y="624" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="200" dur="1.3s" begin="0.8s" fill="freeze"/></rect>
     <text x="350" y="576" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">TOTAL STARS</text>
     <text x="350" y="612" font-size="34" fill="#a855f7" filter="url(#fg)">2</text>
     <rect x="350" y="624" height="6" rx="3" fill="#16263f"/><rect x="350" y="624" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="50" dur="1.3s" begin="1s" fill="freeze"/></rect>
@@ -99,10 +99,10 @@
   <line x1="20" y1="652" x2="980" y2="652" class="ln" stroke="#1b2b45"/>
   <circle cx="34" cy="684" r="6" fill="#28c840" filter="url(#fs)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
   <text x="52" y="689" font-size="15" font-weight="bold" fill="#00f0ff" letter-spacing="2">// LATEST SIGNAL · 最近动态</text>
-  <text x="34" y="726" font-size="26" font-weight="bold" fill="url(#g1)" filter="url(#fg)">work-planner</text>
-  <text x="34" y="752" font-size="14" class="txt" fill="#cfe3ff">工作规划 · 看板/列表/本周/能力 + AI 总结的纯静态 PWA</text>
-  <text x="966" y="722" text-anchor="end" font-size="14" font-weight="bold" fill="#a855f7">◈ JavaScript</text>
-  <text x="966" y="748" text-anchor="end" font-size="13" fill="#ff4fd8">⟳ 2026-06-22</text>
+  <text x="34" y="726" font-size="26" font-weight="bold" fill="url(#g1)" filter="url(#fg)">pdf-translate-mac</text>
+  <text x="34" y="752" font-size="14" class="txt" fill="#cfe3ff">macOS SwiftUI 界面，给 PDFMathTranslate (pdf2zh) 做的桌面 App：拖入 PDF 一键翻译、保留排版、直接打</text>
+  <text x="966" y="722" text-anchor="end" font-size="14" font-weight="bold" fill="#a855f7">◈ Swift</text>
+  <text x="966" y="748" text-anchor="end" font-size="13" fill="#ff4fd8">⟳ 2026-06-23</text>
 
   <!-- ===== INCOMING (入学喜讯) ===== -->
   <line x1="20" y1="772" x2="980" y2="772" class="ln" stroke="#1b2b45"/>
