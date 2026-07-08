@@ -21,7 +21,7 @@
   <!-- title bar -->
   <text x="30" y="40" font-size="22" font-weight="bold" fill="#00f0ff" filter="url(#fs)" letter-spacing="2">// XINPING LEI — CONTROL DECK</text>
   <text x="970" y="40" text-anchor="end" font-size="14" font-weight="bold" fill="#28c840">● ONLINE<animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></text>
-  <text x="560" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#28c840" filter="url(#fs)">⚽ WORLD CUP 2026 · FINAL T-13d</text>
+  <text x="560" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#28c840" filter="url(#fs)">⚽ WORLD CUP 2026 · FINAL T-12d</text>
   <line x1="20" y1="56" x2="980" y2="56" class="ln" stroke="#1b2b45"/>
   <line x1="552" y1="56" x2="552" y2="420" class="ln" stroke="#1b2b45"/>
 
