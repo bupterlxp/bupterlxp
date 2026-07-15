@@ -10,8 +10,8 @@
   <rect x="3" y="3" width="994" height="144" rx="14" fill="url(#agrid)" opacity="0.5"/>
   <circle cx="34" cy="38" r="6" fill="#ff4fd8" filter="url(#fs)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
   <text x="52" y="43" font-size="16" font-weight="bold" fill="#00f0ff" letter-spacing="2">// arXiv PICK OF THE DAY · cs.CL</text>
-  <text class="txt" x="34" y="80" font-size="17" font-weight="bold" fill="#cfe3ff">Metacognition in LLMs: Foundations, Progress, and Opportunitie</text>
-  <text class="txt" x="34" y="104" font-size="17" font-weight="bold" fill="#cfe3ff">s</text>
-  <text x="34" y="130" font-size="13" fill="#a855f7">Gabrielle Kaili-May Liu et al.</text>
-  <text x="966" y="130" text-anchor="end" font-size="12" fill="#7fdfff">http://arxiv.org/abs/2607.11881v1</text>
+  <text class="txt" x="34" y="80" font-size="17" font-weight="bold" fill="#cfe3ff">Do AI Agents Know When a Task Is Simple? Toward Complexity-Awa</text>
+  <text class="txt" x="34" y="104" font-size="17" font-weight="bold" fill="#cfe3ff">re Reasoning and Execution</text>
+  <text x="34" y="130" font-size="13" fill="#a855f7">Junjie Yin et al.</text>
+  <text x="966" y="130" text-anchor="end" font-size="12" fill="#7fdfff">http://arxiv.org/abs/2607.13034v1</text>
 </svg>
