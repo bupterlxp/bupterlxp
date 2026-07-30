@@ -102,7 +102,7 @@
   <text x="34" y="726" font-size="26" font-weight="bold" fill="url(#g1)" filter="url(#fg)">tokenwave-website</text>
   <text x="34" y="752" font-size="14" class="txt" fill="#cfe3ff">TokenWave AI benchmark portal (WIP, do not publish before style differenti</text>
   <text x="966" y="722" text-anchor="end" font-size="14" font-weight="bold" fill="#a855f7">◈ HTML</text>
-  <text x="966" y="748" text-anchor="end" font-size="13" fill="#ff4fd8">⟳ 2026-07-19</text>
+  <text x="966" y="748" text-anchor="end" font-size="13" fill="#ff4fd8">⟳ 2026-07-30</text>
 
   <!-- ===== INCOMING (入学喜讯) ===== -->
   <line x1="20" y1="772" x2="980" y2="772" class="ln" stroke="#1b2b45"/>
