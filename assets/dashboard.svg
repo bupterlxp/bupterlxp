@@ -92,7 +92,7 @@
     <text x="350" y="612" font-size="34" fill="#a855f7" filter="url(#fg)">2</text>
     <rect x="350" y="624" height="6" rx="3" fill="#16263f"/><rect x="350" y="624" height="6" rx="3" fill="url(#g1)"><animate attributeName="width" from="0" to="50" dur="1.3s" begin="1s" fill="freeze"/></rect>
     <text x="660" y="576" class="lbl" font-size="13" fill="#7fdfff" letter-spacing="1">FOLLOWERS · SINCE</text>
-    <text x="660" y="612" font-size="34" fill="#ff00e5" filter="url(#fg)">1 · 2023</text>
+    <text x="660" y="612" font-size="34" fill="#ff00e5" filter="url(#fg)">2 · 2023</text>
   </g>
 
   <!-- ===== LATEST SIGNAL ===== -->
