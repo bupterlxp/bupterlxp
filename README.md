@@ -1,16 +1,25 @@
-# Xinping Lei
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/profile/banner-mobile.svg" />
+  <img src="assets/profile/banner.svg" alt="Xinping Lei | LLM agents, agentic coding, and research engineering" width="100%" />
+</picture>
 
-**LLM agents · Agentic coding · Research engineering**
+<p align="center">
+  <strong>LLM agents · Agentic coding · Research engineering</strong><br />
+  <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=en">Google Scholar</a>
+  &nbsp; / &nbsp; <a href="https://arxiv.org/a/lei_x_1">arXiv</a>
+  &nbsp; / &nbsp; <a href="mailto:1874493887@qq.com">Email</a>
+</p>
 
 I work on language-model agents, with an interest in how they plan, follow
 instructions, and solve real software tasks. My research spans multi-agent
 systems, coding evaluation, reasoning, and scientific idea generation.
 
-[Google Scholar](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=en)
-&nbsp; / &nbsp; [arXiv](https://arxiv.org/a/lei_x_1)
-&nbsp; / &nbsp; [Email](mailto:1874493887@qq.com)
-
 ## Research
+
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/profile/research-mobile.svg" />
+  <img src="assets/profile/research.svg" alt="Research constellation: agentic coding, multi-agent systems, reasoning and alignment, and scientific ideation" width="100%" />
+</picture>
 
 | Focus | Selected work |
 | :--- | :--- |
@@ -88,3 +97,8 @@ An automatic multi-agent system for music video generation.
 </p>
 
 Python · PyTorch · FastAPI · Docker · Git · Linux · LaTeX
+
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/profile/terminal-mobile.svg" />
+  <img src="assets/profile/terminal.svg" alt="The research loop: ask, build, evaluate, iterate" width="100%" />
+</picture>

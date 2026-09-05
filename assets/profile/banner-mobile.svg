@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 540" width="420" height="540" fill="none" role="img" aria-labelledby="title description" font-family="Arial, Helvetica, sans-serif" letter-spacing="0">
+  <title id="title">Xinping Lei | Research Lab</title>
+  <desc id="description">An animated portrait of Xinping Lei with moving circuit signals. LLM agents, agentic coding, and research engineering.</desc>
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 H 0 V 32" stroke="#26342f" stroke-width="0.7" />
+    </pattern>
+    <clipPath id="name-scan">
+      <rect x="21" y="45" width="350" height="8">
+        <animate attributeName="y" values="45;99;99" dur="5s" repeatCount="indefinite" keyTimes="0;0.55;1" />
+      </rect>
+    </clipPath>
+  </defs>
+  <rect width="420" height="540" fill="#090e0c" />
+  <rect width="420" height="540" fill="url(#grid)" opacity="0.42" />
+  <rect x="0.0" y="0" width="105.0" height="3" fill="#39e5dc" />
+  <rect x="105.0" y="0" width="105.0" height="3" fill="#ff6f91" />
+  <rect x="210.0" y="0" width="105.0" height="3" fill="#c4f279" />
+  <rect x="315.0" y="0" width="105.0" height="3" fill="#ffc477" />
+  <path d="M 0 539 H 420" stroke="#31463a" />
+  <text x="26" y="34" font-size="17" fill="#39e5dc" font-family="'Courier New', monospace">bupterlxp / research.lab</text>
+  <text x="26" y="94" font-size="49" fill="#eaf3ef" font-weight="bold">Xinping Lei</text>
+  <g clip-path="url(#name-scan)" aria-hidden="true">
+    <text x="28" y="94" font-size="49" fill="#39e5dc" font-weight="bold" filter="url(#glow)">Xinping Lei</text>
+    <text x="24" y="94" font-size="49" fill="none" stroke="#ff6f91" stroke-width="1" font-weight="bold">Xinping Lei</text>
+  </g>
+  <text x="28" y="129" font-size="22" fill="#39e5dc">LLM agents + agentic coding</text>
+  <g transform="translate(66,112) scale(0.72)">
+    <circle cx="180" cy="208" r="140" fill="none" stroke="#39e5dc" stroke-width="2" stroke-dasharray="6 14" opacity="0.55">
+      <animateTransform attributeName="transform" type="rotate" from="0 180 208" to="360 180 208" dur="20s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="180" cy="208" r="140" fill="none" stroke="#39e5dc" stroke-width="1" stroke-dasharray="2 28" opacity="0.4">
+      <animateTransform attributeName="transform" type="rotate" from="360 180 208" to="0 180 208" dur="26s" repeatCount="indefinite" />
+    </circle>
+    <g font-weight="bold" filter="url(#glow)">
+      <text x="40" y="100" font-size="20" fill="#39e5dc" opacity="0.85">&lt;/&gt;<animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.5s" repeatCount="indefinite" />
+      </text>
+      <text x="288" y="124" font-size="20" fill="#ff6f91" opacity="0.85">{ }<animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0" dur="4.2s" repeatCount="indefinite" />
+      </text>
+      <text x="300" y="256" font-size="16" fill="#ffc477" opacity="0.85">AI<animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="3.8s" repeatCount="indefinite" />
+      </text>
+      <text x="40" y="256" font-size="22" fill="#ffc477" opacity="0.8">λ<animateTransform attributeName="transform" type="translate" values="0 0;0 6;0 0" dur="4.6s" repeatCount="indefinite" />
+      </text>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="4s" repeatCount="indefinite" />
+      <ellipse cx="180" cy="424" rx="92" ry="13" fill="#39e5dc" opacity="0.18" filter="url(#glow)" />
+      <path d="M150,214 L96,250 C72,274 66,302 66,440 L294,440 C294,302 288,274 264,250 L210,214 Z" fill="#1b2c52" stroke="#2a3f6e" stroke-width="2" />
+      <path d="M138,210 C150,250 210,250 222,210 C214,236 146,236 138,210 Z" fill="#14213f" />
+      <path d="M152,214 Q180,242 208,214" fill="none" stroke="#14213f" stroke-width="6" stroke-linecap="round" />
+      <line x1="180" y1="238" x2="180" y2="440" stroke="#39e5dc" stroke-width="2.5" filter="url(#glow)" />
+      <line x1="168" y1="236" x2="166" y2="300" stroke="#cfe3ff" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="192" y1="236" x2="194" y2="300" stroke="#cfe3ff" stroke-width="2.5" stroke-linecap="round" />
+      <circle cx="166" cy="302" r="3" fill="#39e5dc" />
+      <circle cx="194" cy="302" r="3" fill="#ff6f91" />
+      <polygon points="180,326 196,336 196,356 180,366 164,356 164,336" fill="#0b1530" stroke="#39e5dc" stroke-width="1.8" filter="url(#glow)" />
+      <text x="180" y="352" text-anchor="middle" font-size="12" font-weight="bold" fill="#39e5dc">AI</text>
+      <rect x="166" y="196" width="28" height="26" rx="8" fill="#e7b48c" />
+      <ellipse cx="180" cy="108" rx="74" ry="62" fill="#14142a" />
+      <path d="M116,116 C100,150 102,188 120,210 L142,200 C128,176 128,142 140,118 Z" fill="#14142a" />
+      <path d="M244,116 C260,150 258,188 240,210 L218,200 C232,176 232,142 220,118 Z" fill="#14142a" />
+      <ellipse cx="180" cy="152" rx="56" ry="58" fill="#f6cda8" />
+      <circle cx="126" cy="160" r="10" fill="#f0c098" />
+      <circle cx="234" cy="160" r="10" fill="#f0c098" />
+      <circle cx="142" cy="176" r="11" fill="#ff8fb0" opacity="0.30" />
+      <circle cx="218" cy="176" r="11" fill="#ff8fb0" opacity="0.30" />
+      <path d="M112,154 Q110,94 180,88 Q250,94 248,154 Q244,118 218,108 Q230,144 208,154 Q206,112 182,106 Q193,146 168,154 Q166,110 146,112 Q149,144 134,154 Q127,120 112,154 Z" fill="#14142a" />
+      <path d="M150,110 Q136,134 128,156" fill="none" stroke="#39e5dc" stroke-width="1.6" opacity="0.75" />
+      <path d="M182,102 Q180,128 180,150" fill="none" stroke="#ffc477" stroke-width="1.5" opacity="0.65" />
+      <path d="M214,108 Q226,132 232,156" fill="none" stroke="#ff6f91" stroke-width="1.6" opacity="0.65" />
+      <path d="M138,140 Q150,135 162,139" stroke="#23233b" stroke-width="3" fill="none" stroke-linecap="round" />
+      <path d="M198,139 Q210,135 222,140" stroke="#23233b" stroke-width="3" fill="none" stroke-linecap="round" />
+      <g>
+        <ellipse cx="150" cy="158" rx="10" ry="8" fill="#ffffff" />
+        <ellipse cx="210" cy="158" rx="10" ry="8" fill="#ffffff" />
+        <circle cx="152" cy="159" r="4.5" fill="#1a1a2e" />
+        <circle cx="212" cy="159" r="4.5" fill="#1a1a2e" />
+        <circle cx="153.5" cy="157" r="1.6" fill="#fff" />
+        <circle cx="213.5" cy="157" r="1.6" fill="#fff" />
+        <ellipse cx="150" cy="158" rx="11" ry="0" fill="#f6cda8">
+          <animate attributeName="ry" values="0;0;9;0;0" keyTimes="0;0.92;0.95;0.98;1" dur="4.5s" repeatCount="indefinite" />
+        </ellipse>
+        <ellipse cx="210" cy="158" rx="11" ry="0" fill="#f6cda8">
+          <animate attributeName="ry" values="0;0;9;0;0" keyTimes="0;0.92;0.95;0.98;1" dur="4.5s" repeatCount="indefinite" />
+        </ellipse>
+      </g>
+      <g stroke="#39e5dc" stroke-width="2.6" fill="#0a1828" fill-opacity="0.18" filter="url(#glow)">
+        <rect x="130" y="144" width="42" height="30" rx="9" />
+        <rect x="188" y="144" width="42" height="30" rx="9" />
+      </g>
+      <line x1="172" y1="153" x2="188" y2="153" stroke="#39e5dc" stroke-width="2.6" />
+      <line x1="130" y1="150" x2="118" y2="156" stroke="#39e5dc" stroke-width="2.6" />
+      <line x1="230" y1="150" x2="242" y2="156" stroke="#39e5dc" stroke-width="2.6" />
+      <path d="M180,166 l-3,11 q3,3 6,0" fill="none" stroke="#d9a47e" stroke-width="2" stroke-linecap="round" />
+      <path d="M166,186 Q180,197 194,186" fill="none" stroke="#b5654a" stroke-width="3" stroke-linecap="round" />
+      <path d="M110,156 C110,80 250,80 250,156" fill="none" stroke="#23233b" stroke-width="10" stroke-linecap="round" />
+      <rect x="102" y="146" width="26" height="42" rx="11" fill="#23233b" stroke="#ff6f91" stroke-width="2" />
+      <rect x="232" y="146" width="26" height="42" rx="11" fill="#23233b" stroke="#39e5dc" stroke-width="2" />
+      <polygon points="180,50 244,78 180,106 116,78" fill="#15152a" stroke="#39e5dc" stroke-width="2" />
+      <polygon points="180,64 244,78 180,92 116,78" fill="#1f1f3d" />
+      <circle cx="180" cy="78" r="4" fill="#ffd23f" />
+      <path d="M180,78 L216,86 L216,116" fill="none" stroke="#ffd23f" stroke-width="2.2">
+        <animate attributeName="d" values="M180,78 L216,86 L216,116;M180,78 L216,86 L210,118;M180,78 L216,86 L216,116" dur="3s" repeatCount="indefinite" />
+      </path>
+      <rect x="211" y="114" width="10" height="13" rx="2" fill="#ffd23f">
+        <animate attributeName="x" values="211;205;211" dur="3s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+  <path d="M 26 172 V 394 H 52" stroke="#39e5dc" stroke-width="1.5" opacity="0.3" />
+  <rect x="-3" y="-3" width="6" height="6" fill="#39e5dc" filter="url(#glow)">
+    <animateMotion path="M 26 172 V 394 H 52" dur="5s" begin="0s" repeatCount="indefinite" />
+  </rect>
+  <path d="M 394 172 V 394 H 368" stroke="#ff6f91" stroke-width="1.5" opacity="0.3" />
+  <rect x="-3" y="-3" width="6" height="6" fill="#ff6f91" filter="url(#glow)">
+    <animateMotion path="M 394 172 V 394 H 368" dur="6s" begin="0s" repeatCount="indefinite" />
+  </rect>
+  <text x="210" y="466" font-size="20" fill="#c4f279" text-anchor="middle" font-family="'Courier New', monospace">RESEARCH / BUILD / EVALUATE</text>
+  <text x="210" y="505" font-size="18" fill="#a6b7af" text-anchor="middle" font-family="'Courier New', monospace">one idea, many possibilities.</text>
+</svg>

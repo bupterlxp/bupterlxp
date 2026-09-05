@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 290" width="420" height="290" fill="none" role="img" aria-labelledby="title description" font-family="Arial, Helvetica, sans-serif" letter-spacing="0">
+  <title id="title">The Research Loop</title>
+  <desc id="description">An animated illustration of the research loop: ask, build, evaluate, and iterate.</desc>
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 H 0 V 32" stroke="#26342f" stroke-width="0.7" />
+    </pattern>
+  </defs>
+  <rect width="420" height="290" fill="#090e0c" />
+  <rect width="420" height="290" fill="url(#grid)" opacity="0.42" />
+  <rect x="0.0" y="0" width="105.0" height="3" fill="#39e5dc" />
+  <rect x="105.0" y="0" width="105.0" height="3" fill="#ff6f91" />
+  <rect x="210.0" y="0" width="105.0" height="3" fill="#c4f279" />
+  <rect x="315.0" y="0" width="105.0" height="3" fill="#ffc477" />
+  <path d="M 0 289 H 420" stroke="#31463a" />
+  <text x="26" y="39" font-size="18" fill="#39e5dc" font-family="'Courier New', monospace">~/research $ run --curiosity</text>
+  <text x="26" y="99" font-size="23" fill="#39e5dc" font-weight="bold" font-family="'Courier New', monospace">ASK</text>
+  <path d="M 26 118 h 158" stroke="#34473c" stroke-width="3" />
+  <path d="M 26 118 h 158" stroke="#39e5dc" stroke-width="3" stroke-dasharray="28 230">
+    <animate attributeName="stroke-dashoffset" values="258;0" dur="4s" repeatCount="indefinite" begin="-0s" />
+  </path>
+  <text x="221" y="99" font-size="23" fill="#ff6f91" font-weight="bold" font-family="'Courier New', monospace">BUILD</text>
+  <path d="M 221 118 h 158" stroke="#34473c" stroke-width="3" />
+  <path d="M 221 118 h 158" stroke="#ff6f91" stroke-width="3" stroke-dasharray="28 230">
+    <animate attributeName="stroke-dashoffset" values="258;0" dur="4s" repeatCount="indefinite" begin="-1s" />
+  </path>
+  <text x="26" y="183" font-size="23" fill="#c4f279" font-weight="bold" font-family="'Courier New', monospace">EVALUATE</text>
+  <path d="M 26 202 h 158" stroke="#34473c" stroke-width="3" />
+  <path d="M 26 202 h 158" stroke="#c4f279" stroke-width="3" stroke-dasharray="28 230">
+    <animate attributeName="stroke-dashoffset" values="258;0" dur="4s" repeatCount="indefinite" begin="-2s" />
+  </path>
+  <text x="221" y="183" font-size="23" fill="#ffc477" font-weight="bold" font-family="'Courier New', monospace">ITERATE</text>
+  <path d="M 221 202 h 158" stroke="#34473c" stroke-width="3" />
+  <path d="M 221 202 h 158" stroke="#ffc477" stroke-width="3" stroke-dasharray="28 230">
+    <animate attributeName="stroke-dashoffset" values="258;0" dur="4s" repeatCount="indefinite" begin="-3s" />
+  </path>
+  <text x="26" y="264" font-size="18" fill="#a6b7af" font-family="'Courier New', monospace">while curious: keep_building()</text>
+</svg>

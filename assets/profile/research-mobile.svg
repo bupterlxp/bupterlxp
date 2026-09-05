@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 642" width="420" height="642" fill="none" role="img" aria-labelledby="title description" font-family="Arial, Helvetica, sans-serif" letter-spacing="0">
+  <title id="title">Research Constellation</title>
+  <desc id="description">Four connected research directions: agentic coding, multi-agent systems, reasoning and alignment, and scientific ideation.</desc>
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 H 0 V 32" stroke="#26342f" stroke-width="0.7" />
+    </pattern>
+  </defs>
+  <rect width="420" height="642" fill="#090e0c" />
+  <rect width="420" height="642" fill="url(#grid)" opacity="0.42" />
+  <rect x="0.0" y="0" width="105.0" height="3" fill="#39e5dc" />
+  <rect x="105.0" y="0" width="105.0" height="3" fill="#ff6f91" />
+  <rect x="210.0" y="0" width="105.0" height="3" fill="#c4f279" />
+  <rect x="315.0" y="0" width="105.0" height="3" fill="#ffc477" />
+  <path d="M 0 641 H 420" stroke="#31463a" />
+  <text x="26" y="43" font-size="20" fill="#39e5dc" font-family="'Courier New', monospace">RESEARCH CONSTELLATION</text>
+  <path d="M 40 106 V 222" stroke="#39e5dc" stroke-width="1.5" opacity="0.3" />
+  <rect x="-3" y="-3" width="6" height="6" fill="#39e5dc" filter="url(#glow)">
+    <animateMotion path="M 40 106 V 222" dur="3s" begin="0s" repeatCount="indefinite" />
+  </rect>
+  <rect x="34" y="91" width="12" height="12" fill="#39e5dc" />
+  <text x="62" y="101" font-size="23" fill="#39e5dc" font-weight="bold">Agentic coding</text>
+  <text x="62" y="135" font-size="20" fill="#cad8d0">SWE-Compass / WebCompass</text>
+  <text x="62" y="185" font-size="20" fill="#cad8d0">CodeTracer / Solvita</text>
+  <path d="M 40 238 V 354" stroke="#ff6f91" stroke-width="1.5" opacity="0.3" />
+  <rect x="-3" y="-3" width="6" height="6" fill="#ff6f91" filter="url(#glow)">
+    <animateMotion path="M 40 238 V 354" dur="4s" begin="0s" repeatCount="indefinite" />
+  </rect>
+  <rect x="34" y="223" width="12" height="12" fill="#ff6f91" />
+  <text x="62" y="233" font-size="23" fill="#ff6f91" font-weight="bold">Multi-agent systems</text>
+  <text x="62" y="267" font-size="20" fill="#cad8d0">AutoMV / Vibe AIGC</text>
+  <path d="M 40 370 V 486" stroke="#c4f279" stroke-width="1.5" opacity="0.3" />
+  <rect x="-3" y="-3" width="6" height="6" fill="#c4f279" filter="url(#glow)">
+    <animateMotion path="M 40 370 V 486" dur="5s" begin="0s" repeatCount="indefinite" />
+  </rect>
+  <rect x="34" y="355" width="12" height="12" fill="#c4f279" />
+  <text x="62" y="365" font-size="23" fill="#c4f279" font-weight="bold">Reasoning + alignment</text>
+  <text x="62" y="399" font-size="20" fill="#cad8d0">HiPO / Inverse IFEval</text>
+  <text x="62" y="449" font-size="20" fill="#cad8d0">KAT-Coder</text>
+  <rect x="34" y="487" width="12" height="12" fill="#ffc477" />
+  <text x="62" y="497" font-size="23" fill="#ffc477" font-weight="bold">Scientific ideation</text>
+  <text x="62" y="531" font-size="20" fill="#cad8d0">MotivGraph-SoIQ</text>
+  <text x="62" y="555" font-size="20" fill="#cad8d0">MMG2Skill</text>
+  <text x="26" y="614" font-size="17" fill="#a6b7af" font-family="'Courier New', monospace">questions &gt; experiments &gt; evidence</text>
+</svg>
