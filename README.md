@@ -1,129 +1,90 @@
-<!-- ============ ⚡ CYBER-NEON PROFILE · 全自托管 SVG · 国内零碎图 ============ -->
+# Xinping Lei
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/banner.svg" alt="Xinping Lei — LLM / Agent Researcher (with avatar)" width="100%" />
-</p>
+**LLM agents · Agentic coding · Research engineering**
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=2600&pause=800&color=00F0FF&center=true&vCenter=true&width=720&lines=%24+whoami+-%3E+Xinping+Lei+%40+BUPT;compiling+ideas...+spawning+agents...;while+not+done%3A+research()+%E2%9A%A1;git+commit+-m+'one+more+paper';Building+LLM+Agents+that+actually+work" alt="Typing SVG" />
-</p>
+I work on language-model agents, with an interest in how they plan, follow
+instructions, and solve real software tasks. My research spans multi-agent
+systems, coding evaluation, reasoning, and scientific idea generation.
 
-<p align="center">
-  <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://img.shields.io/badge/Google_Scholar-00F0FF?style=for-the-badge&logo=googlescholar&logoColor=black" /></a>
-  <a href="https://github.com/bupterlxp"><img src="https://img.shields.io/badge/GitHub-A855F7?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://arxiv.org/a/lei_x_1"><img src="https://img.shields.io/badge/arXiv-FF00E5?style=for-the-badge&logo=arxiv&logoColor=white" /></a>
-  <img src="https://komarev.com/ghpvc/?username=bupterlxp&color=00f0ff&style=for-the-badge&label=VIEWS" />
-</p>
+[Google Scholar](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=en)
+&nbsp; / &nbsp; [arXiv](https://arxiv.org/a/lei_x_1)
+&nbsp; / &nbsp; [Email](mailto:1874493887@qq.com)
 
-<!-- 统一控制台：whoami / 技能雷达 / 战绩 / 最近动态 / 入学喜讯 / 状态栏（数据每日自动刷新） -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/dashboard.svg" alt="Control Deck" width="94%" />
-</p>
+## Research
 
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+| Focus | Selected work |
+| :--- | :--- |
+| **Coding agents and evaluation** | [SWE-Compass](https://arxiv.org/abs/2511.05459), [WebCompass](https://arxiv.org/abs/2604.18224), [CodeTracer](https://arxiv.org/abs/2604.11641), [Solvita](https://arxiv.org/abs/2605.15301) |
+| **Multi-agent systems** | [AutoMV](https://arxiv.org/abs/2512.12196), [Vibe AIGC](https://arxiv.org/abs/2602.04575) |
+| **Reasoning and instruction following** | [HiPO](https://arxiv.org/abs/2509.23967), [Inverse IFEval](https://arxiv.org/abs/2509.04292), [KAT-Coder](https://arxiv.org/abs/2510.18779) |
+| **Scientific idea generation** | [MotivGraph-SoIQ](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=en), [MMG2Skill](https://arxiv.org/abs/2606.01993) |
 
-## 🌌 论文星图
+## Research Projects
 
-<p align="center">
-  <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/constellation.svg" alt="paper constellation" width="92%" /></a>
-</p>
+### [ANCHOR](https://github.com/bupterlxp/ANCHOR)
 
-🔗 **点击直达 arXiv**（GitHub 内嵌图中节点不可点，附链接表）：
-[AutoMV](https://arxiv.org/abs/2512.12196) · [Vibe AIGC](https://arxiv.org/abs/2602.04575) · [CodeTracer](https://arxiv.org/abs/2604.11641) · [SWE-Compass](https://arxiv.org/abs/2511.05459) · [WebCompass](https://arxiv.org/abs/2604.18224) · [Solvita](https://arxiv.org/abs/2605.15301) · [HiPO](https://arxiv.org/abs/2509.23967) · [Inverse IFEval](https://arxiv.org/abs/2509.04292) · [KAT-Coder](https://arxiv.org/abs/2510.18779) · [MotivGraph-SoIQ](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN) · [MMG2Skill](https://arxiv.org/abs/2606.01993)
+Evaluating whether coding agents follow engineering constraints on modification
+scope, workflow order, validation, tool use, and reporting.
 
-> 🌓 全站自托管图支持**浅/深色自适应**（清爽蓝白 ↔ 赛博霓虹）；右上角节日皮肤随日期自动切换（当前：⚽ FIFA World Cup 2026 决赛倒计时）。
+358 tasks across 23 repositories and 8 programming languages. The public
+repository includes construction and evaluation prompts and the constraint
+taxonomy; the evaluation harness is being prepared for release.
 
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+[Repository](https://github.com/bupterlxp/ANCHOR)
+&nbsp; / &nbsp; [Dataset](https://huggingface.co/datasets/Yone-01/ANCHOR)
 
-## 🗺️ 学术时间轴
+### [WebCompass Pipeline](https://github.com/bupterlxp/webcompass_pipeline)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/timeline.svg" alt="academic timeline" width="92%" />
-</p>
+A pipeline for generating, evaluating, and filtering web project code. It
+combines instruction checklists, code review, and visual screenshot evaluation.
 
-## 🏆 成就墙
+[Repository](https://github.com/bupterlxp/webcompass_pipeline)
+&nbsp; / &nbsp; [Paper](https://arxiv.org/abs/2604.18224)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/achievements.svg" alt="achievements" width="92%" />
-</p>
+### [AutoMV](https://arxiv.org/abs/2512.12196)
 
-## 📰 arXiv 今日精选
+An automatic multi-agent system for music video generation.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/arxiv.svg" alt="arXiv pick of the day" width="92%" />
-</p>
+[Paper](https://arxiv.org/abs/2512.12196)
+&nbsp; / &nbsp; [Project page source](https://github.com/bupterlxp/AutoMV.github.io)
 
-> 🤖 由 GitHub Action 每日从 arXiv API 自动抓取最新 cs.CL 论文
+<details>
+<summary><strong>Selected publication titles</strong></summary>
 
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
+- **MotivGraph-SoIQ: Integrating Motivational Knowledge Graphs and Socratic Dialogue for Enhanced LLM Ideation**. Findings of EMNLP 2025. [Scholar](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=en)
+- **SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for LLMs**. [Paper](https://arxiv.org/abs/2511.05459)
+- **AutoMV: An Automatic Multi-Agent System for Music Video Generation**. [Paper](https://arxiv.org/abs/2512.12196)
+- **Inverse IFEval: Can LLMs Unlearn Stubborn Training Conventions to Follow Real Instructions?** [Paper](https://arxiv.org/abs/2509.04292)
+- **HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs**. [Paper](https://arxiv.org/abs/2509.23967)
+- **KAT-Coder Technical Report**. [Paper](https://arxiv.org/abs/2510.18779)
 
-## 🔬 研究方向
+[Full publication list on Google Scholar](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=en)
 
-| 方向 | 代表工作 |
-|------|----------|
-| 🧩 **Multi-Agent 系统与编排** | AutoMV（音乐视频生成多智能体）· Vibe AIGC |
-| 💻 **Agentic Coding 与评测** | SWE-Compass · WebCompass · Solvita · CodeTracer |
-| 🧠 **LLM 推理 / 指令遵循 / 对齐** | HiPO · Inverse IFEval · KAT-Coder |
-| 💡 **科研创意生成（Ideation）** | MotivGraph-SoIQ (EMNLP 2025 Findings) · MMG2Skill |
+</details>
 
-## 📄 代表性论文（Selected）
+## Tools I Build
 
-- **MotivGraph-SoIQ: Integrating Motivational Knowledge Graphs and Socratic Dialogue for Enhanced LLM Ideation** — *Findings of EMNLP 2025*
-- **KAT-Coder Technical Report** — [arXiv:2510.18779](https://arxiv.org/abs/2510.18779)
-- **AutoMV: An Automatic Multi-Agent System for Music Video Generation** — [arXiv:2512.12196](https://arxiv.org/abs/2512.12196)
-- **SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for LLMs** — [arXiv:2511.05459](https://arxiv.org/abs/2511.05459)
-- **Inverse IFEval: Can LLMs Unlearn Stubborn Training Conventions to Follow Real Instructions?** — [arXiv:2509.04292](https://arxiv.org/abs/2509.04292)
-- **HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs** — [arXiv:2509.23967](https://arxiv.org/abs/2509.23967)
+| Project | What it does |
+| :--- | :--- |
+| [Math Motion](https://github.com/bupterlxp/math-motion-classroom) | Interactive math lessons, animation previews, and standalone HTML exports for middle school classrooms. |
+| [PDF Translate for macOS](https://github.com/bupterlxp/pdf-translate-mac) | A SwiftUI desktop app for PDFMathTranslate, with drag-and-drop translation and preserved layouts. |
+| [Feishu × Claude Code](https://github.com/bupterlxp/feishu-claude-code) | A Feishu bot that connects to Claude Code through a configurable API gateway. |
+| [Codex Config Manager](https://github.com/bupterlxp/codex-config-manager) | A local web interface for switching authentication and configuration profiles. |
+| [Work Planner](https://github.com/bupterlxp/work-planner) | A static PWA with a Kanban board, weekly planning, and AI summaries. |
 
-> 📚 完整论文列表见 [Google Scholar](https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN)
+## Background
 
-## 🚀 开源项目
+- **BUPT** · Beijing University of Posts and Telecommunications.
+- **2026 PhD admission** · Joint program at Nanjing University and Zhongguancun Academy (南京大学 × 北京中关村学院).
 
-- 🎬 **[AutoMV](https://github.com/bupterlxp/AutoMV.github.io)** — 自动化多智能体音乐视频生成系统
-- 🌐 **[webcompass_pipeline](https://github.com/bupterlxp/webcompass_pipeline)** — 多模态 Web 代码生成 / 评测 / 过滤流水线
-- 🤖 **[feishu-claude-code](https://github.com/bupterlxp/feishu-claude-code)** — 飞书 × Claude Code Bot（适配自定义 API 网关）
-- 🗂️ **[work-planner](https://github.com/bupterlxp/work-planner)** — 看板 / 本周 / AI 总结的纯静态 PWA 工作规划工具
-- ⚙️ **[codex-config-manager](https://github.com/bupterlxp/codex-config-manager)** — 本地切换 Codex 鉴权 / 配置档的 Web UI
-
-## 🛠️ 技术栈
+## Toolbox
 
 <p>
-  <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/-LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/-LLM/GPT-412991?style=for-the-badge&logo=openai&logoColor=white" />
-  <img src="https://img.shields.io/badge/-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/-LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" />
+  <img src="assets/stack/python.svg" alt="Python" width="28" height="28" /> &nbsp;
+  <img src="assets/stack/pytorch.svg" alt="PyTorch" width="28" height="28" /> &nbsp;
+  <img src="assets/stack/fastapi.svg" alt="FastAPI" width="28" height="28" /> &nbsp;
+  <img src="assets/stack/docker.svg" alt="Docker" width="28" height="28" /> &nbsp;
+  <img src="assets/stack/git.svg" alt="Git" width="28" height="28" />
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/cube.svg" alt="3D skill cube" width="240" />
-</p>
-
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
-
-## 🧠 大脑进程监视器
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/htop.svg" alt="brain process monitor" width="80%" />
-</p>
-
-## 🐍 贡献动画
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/output/snake.svg" alt="snake" width="100%" />
-</p>
-
-<img src="https://raw.githubusercontent.com/bupterlxp/bupterlxp/main/assets/divider.svg" width="100%" />
-
-## 📫 友链 / Connect
-
-<p align="center">
-  <a href="https://scholar.google.com/citations?user=8voIL9wAAAAJ&hl=zh-CN"><img src="https://img.shields.io/badge/Google_Scholar-00F0FF?style=for-the-badge&logo=googlescholar&logoColor=black" /></a>
-  <a href="https://github.com/bupterlxp"><img src="https://img.shields.io/badge/GitHub-A855F7?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://arxiv.org/a/lei_x_1"><img src="https://img.shields.io/badge/arXiv-FF00E5?style=for-the-badge&logo=arxiv&logoColor=white" /></a>
-  <a href="mailto:1874493887@qq.com"><img src="https://img.shields.io/badge/QQ_Mail-EB1923?style=for-the-badge&logo=tencentqq&logoColor=white" /></a>
-</p>
+Python · PyTorch · FastAPI · Docker · Git · Linux · LaTeX

@@ -1,6 +1,5 @@
 name: Profile Refresh
 on:
-  schedule: [{cron: "17 22 * * *"}]   # 每天刷新一次（UTC 22:17 ≈ 北京 06:17）
   workflow_dispatch:
 permissions:
   contents: write
